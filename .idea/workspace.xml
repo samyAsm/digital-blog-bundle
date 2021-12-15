@@ -2,9 +2,477 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2832a104-c9a5-4025-ac70-ef4f95bb3cff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlogBundle/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Action.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Action.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/Action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/EntityDescription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/EntityDescription.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/EntityDescription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Guarder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Guarder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/Guarder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/MethodDescription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/MethodDescription.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/MethodDescription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/MustAuthenticate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/MustAuthenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/MustAuthenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/PropertyDescription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/PropertyDescription.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/PropertyDescription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Rule.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Annotations/Rule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Annotations/Rule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/ArticleCommentController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/ArticleCommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/ArticleCommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/ArticleCommentViewController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/ArticleCommentViewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/ArticleCommentViewController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/ArticleController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/ArticleViewController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/ArticleViewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/ArticleViewController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/AuthorController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/AuthorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/AuthorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/AuthorViewController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/AuthorViewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/AuthorViewController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/CategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/CategoryViewController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Back/CategoryViewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/CategoryViewController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Front/AuthController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Front/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Front/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Front/BlogController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Front/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Front/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Test/TestController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Controller/Test/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Test/TestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Command/CoreCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Command/CoreCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Command/CoreCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Controller/AbstractRESTController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Controller/AbstractRESTController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Controller/AbstractRESTController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Controller/CoreController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Controller/CoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Controller/CoreController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Data/APIResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Data/APIResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Data/APIResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Data/SerializableInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Data/SerializableInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Data/SerializableInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Data/TranslatableMessage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Data/TranslatableMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Data/TranslatableMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Data/ValuesRetrieverTrait.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Data/ValuesRetrieverTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Data/ValuesRetrieverTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/AbstractComment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/AbstractComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Entity/AbstractComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/AbstractPerson.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/AbstractPerson.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Entity/AbstractPerson.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/AbstractRole.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/AbstractRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Entity/AbstractRole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/AbstractUser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/AbstractUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Entity/AbstractUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/CoreEntity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Entity/CoreEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Entity/CoreEntity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Exceptions/Alert.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Exceptions/Alert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Exceptions/Alert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Exceptions/HttpException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Exceptions/HttpException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Exceptions/HttpException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Interfaces/Model/OTPInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Interfaces/Model/OTPInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Interfaces/Model/OTPInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Repository/CoreRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Repository/CoreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Repository/CoreRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractBadRequestResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractBadRequestResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Response/AbstractBadRequestResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractConflictResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractConflictResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Response/AbstractConflictResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractForbiddenResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractForbiddenResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Response/AbstractForbiddenResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractNotFoundResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractNotFoundResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Response/AbstractNotFoundResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Response/AbstractResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractUnauthorizedResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Response/AbstractUnauthorizedResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Response/AbstractUnauthorizedResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Subscriber/CoreSubscriber.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Subscriber/CoreSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Subscriber/CoreSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Test/CoreAPITest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Test/CoreAPITest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Test/CoreAPITest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Test/CoreTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Test/CoreTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Test/CoreTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Validations/CoreValidationConstraints.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Validations/CoreValidationConstraints.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Validations/CoreValidationConstraints.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Validations/CoreValidatorConstraints.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Core/Validations/CoreValidatorConstraints.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Validations/CoreValidatorConstraints.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/DependencyInjection/BlogExtension.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/DependencyInjection/BlogExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/BlogExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/DependencyInjection/Configuration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/DependencyInjection/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/Configuration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/DigitalBlogBundle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/DigitalBlogBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitalBlogBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/Article.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/ArticleCategory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/ArticleCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ArticleCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/ArticleComment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/ArticleComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ArticleComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/Author.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/Author.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Author.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/AuthNotAuthorizedException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/AuthNotAuthorizedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/AuthNotAuthorizedException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InsufficientAccessException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InsufficientAccessException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/InsufficientAccessException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InternalServerErrorException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InternalServerErrorException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/InternalServerErrorException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InvalidArgumentException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InvalidArgumentException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/InvalidArgumentException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InvalidConfigurationsException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InvalidConfigurationsException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/InvalidConfigurationsException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InvalidPayloadException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/InvalidPayloadException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/InvalidPayloadException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/NotAuthenticatedException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/NotAuthenticatedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/NotAuthenticatedException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/NotServiceFoundException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/NotServiceFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/NotServiceFoundException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/URLNotFoundFoundException.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Exceptions/URLNotFoundFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/URLNotFoundFoundException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/ArticleCategoryRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/ArticleCategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleCategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/ArticleCommentRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/ArticleCommentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleCommentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/ArticleRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/AuthorRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/AuthorRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AuthorRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/CategoryRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/config/routes.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/config/services.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/config/services.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/config/services.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/ajax-default/ajax_errors.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/ajax-default/ajax_errors.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/ajax-default/ajax_errors.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/archives.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/archives.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/archives.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/back_main.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/back_main.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/back_main.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/custom.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/custom.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/custom.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/datatable.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/datatable.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/datatable.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/font/summernote.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/font/summernote.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/font/summernote.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/font/summernote.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/font/summernote.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/font/summernote.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/font/summernote.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/font/summernote.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/font/summernote.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/loader.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/loader.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/loader.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/main.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/main.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/main.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/modal.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/modal.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/modal.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/summernote.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/summernote.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/summernote.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/theme-settings.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/theme-settings.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/theme-settings.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/theme.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/theme.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/theme.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/trombinos.css.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/css/trombinos.css.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/css/trombinos.css.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/ajax-links.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/ajax-links.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/ajax-links.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/ajax.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/ajax.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/ajax.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/back_main.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/back_main.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/back_main.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/input-tags.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/input-tags.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/input-tags.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/main.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/main.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/main.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/modal.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/modal.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/modal.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/summernote-setup.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/summernote-setup.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/summernote-setup.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/summernote.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/summernote.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/summernote.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/trombinos.js.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/assets/js/trombinos.js.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/assets/js/trombinos.js.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/logged-out-successfully.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/logged-out-successfully.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/logged-out-successfully.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/logged-successfully.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/logged-successfully.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/logged-successfully.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/login-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/login-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/login-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/login.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/not-authorized.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/not-authorized.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/not-authorized.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/redirect-to-login.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/redirect-to-login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/redirect-to-login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-code-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-code-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/reset-password-code-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-code-sent.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-code-sent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/reset-password-code-sent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-confirm.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-confirm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/reset-password-confirm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-done-successfully.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-done-successfully.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/reset-password-done-successfully.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/reset-password-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-request.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/auth/reset-password-request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/auth/reset-password-request.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-delete-form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-delete-form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/articles/article-delete-form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-deleted.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-deleted.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/articles/article-deleted.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-deletion-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-deletion-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/articles/article-deletion-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/articles/article-form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-list.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/articles/article-list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-store-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-store-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/articles/article-store-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-stored.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/articles/article-stored.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/articles/article-stored.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-delete-form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-delete-form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/authors/author-delete-form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-deleted.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-deleted.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/authors/author-deleted.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-deletion-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-deletion-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/authors/author-deletion-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/authors/author-form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-list.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/authors/author-list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-store-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-store-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/authors/author-store-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-stored.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/authors/author-stored.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/authors/author-stored.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-delete-form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-delete-form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/categories/category-delete-form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-deleted.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-deleted.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/categories/category-deleted.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-deletion-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-deletion-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/categories/category-deletion-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/categories/category-form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-list.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/categories/category-list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-store-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-store-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/categories/category-store-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-stored.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/categories/category-stored.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/categories/category-stored.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-delete-form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-delete-form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/comments/comment-delete-form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-deleted.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-deleted.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/comments/comment-deleted.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-deletion-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-deletion-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/comments/comment-deletion-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/comments/comment-form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-list.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/comments/comment-list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-store-fail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-store-fail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/comments/comment-store-fail.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-stored.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/back/comments/comment-stored.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/comments/comment-stored.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/category-archives.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/category-archives.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/category-archives.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/emails/password-setting-code.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/emails/password-setting-code.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/emails/password-setting-code.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/emails/reset-password-code.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/emails/reset-password-code.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/emails/reset-password-code.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/article-content.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/article-content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/article-content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/back-navbar-top.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/back-navbar-top.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/back-navbar-top.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/back_base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/back_base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/back_base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/back_layout.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/back_layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/back_layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/footer-layout.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/footer-layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/footer-layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/hero-article.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/hero-article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/hero-article.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/hero-category.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/hero-category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/hero-category.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/hero.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/hero.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/hero.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/layout.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/logo.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/logo.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/logo.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/nav-links.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/nav-links.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/nav-links.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/navbar-top.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/navbar-top.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/navbar-top.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/navbar.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/parts/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/parts/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/single.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Resources/views/single.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/single.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/Archives.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/Archives.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/Archives.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleDeleted.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleDeleted.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/ArticleDeleted.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleDeletionFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleDeletionFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/ArticleDeletionFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/ArticleForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/ArticleList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleSearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/ArticleSearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleStoreFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleStoreFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/ArticleStoreFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleStored.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/ArticleStored.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/ArticleStored.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/CategoryArchives.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/CategoryArchives.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/CategoryArchives.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/DeleteArticle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/DeleteArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/DeleteArticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/SingleArticle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Article/SingleArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Article/SingleArticle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentDeleted.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentDeleted.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/ArticleComment/ArticleCommentDeleted.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentDeletionFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentDeletionFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/ArticleComment/ArticleCommentDeletionFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/ArticleComment/ArticleCommentForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/ArticleComment/ArticleCommentList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentStoreFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentStoreFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/ArticleComment/ArticleCommentStoreFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentStored.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/ArticleCommentStored.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/ArticleComment/ArticleCommentStored.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/DeleteArticleComment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/ArticleComment/DeleteArticleComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/ArticleComment/DeleteArticleComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/LoggedOutSuccessfully.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/LoggedOutSuccessfully.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/LoggedOutSuccessfully.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/LoggedSuccessfully.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/LoggedSuccessfully.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/LoggedSuccessfully.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/Login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/LoginFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/LoginFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/LoginFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/RedirectToNotAuthenticatedResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/RedirectToNotAuthenticatedResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/RedirectToNotAuthenticatedResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/RedirectToNotAuthorizedResponse.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/RedirectToNotAuthorizedResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/RedirectToNotAuthorizedResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordCodeFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordCodeFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/ResetPasswordCodeFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordCodeSentSuccessfully.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordCodeSentSuccessfully.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/ResetPasswordCodeSentSuccessfully.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordConfirm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordConfirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/ResetPasswordConfirm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordDoneSuccessfully.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordDoneSuccessfully.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/ResetPasswordDoneSuccessfully.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/ResetPasswordFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordRequestForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Auth/ResetPasswordRequestForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Auth/ResetPasswordRequestForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorDeleted.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorDeleted.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Author/AuthorDeleted.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorDeletionFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorDeletionFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Author/AuthorDeletionFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Author/AuthorForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Author/AuthorList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorSearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Author/AuthorSearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorStoreFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorStoreFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Author/AuthorStoreFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorStored.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/AuthorStored.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Author/AuthorStored.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/DeleteAuthor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Author/DeleteAuthor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Author/DeleteAuthor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryDeleted.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryDeleted.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Category/CategoryDeleted.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryDeletionFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryDeletionFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Category/CategoryDeletionFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Category/CategoryForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Category/CategoryList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategorySearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategorySearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Category/CategorySearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryStoreFail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryStoreFail.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Category/CategoryStoreFail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryStored.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/CategoryStored.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Category/CategoryStored.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/DeleteCategory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Responses/Category/DeleteCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Responses/Category/DeleteCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/AuthorAuthenticatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/AuthorAuthenticatorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/AuthorAuthenticatorService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/BlogService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/BlogService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/BlogService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/ConfigService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/ConfigService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/ConfigService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/DirectoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/DirectoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/DirectoryService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/EnvService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/EnvService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/EnvService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/FileUploadService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/FileUploadService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/FileUploadService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/KernelService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/KernelService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/KernelService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/MailingService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/MailingService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/MailingService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/ManagerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/ManagerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/ManagerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/Managers/ArticleCommentManagerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/Managers/ArticleCommentManagerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Managers/ArticleCommentManagerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/Managers/ArticleManagerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/Managers/ArticleManagerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Managers/ArticleManagerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/Managers/AuthorManagerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/Managers/AuthorManagerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Managers/AuthorManagerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/Managers/CategoryManagerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/Managers/CategoryManagerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Managers/CategoryManagerService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/PaginatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/PaginatorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/PaginatorService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/RepositoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/RepositoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RepositoryService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/RequestServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/RequestServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/RequestServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/TranslatorProviderService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/TranslatorProviderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/TranslatorProviderService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/ValidatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Services/ValidatorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/ValidatorService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Subscribers/AuthorAuthenticatorSubscriber.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Subscribers/AuthorAuthenticatorSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subscribers/AuthorAuthenticatorSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Subscribers/ExceptionSubscriber.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Subscribers/ExceptionSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subscribers/ExceptionSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Subscribers/RequestSubscriber.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Subscribers/RequestSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subscribers/RequestSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Twig/AppTwigExtension.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Twig/AppTwigExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Twig/AppTwigExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/DateUtil.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/DateUtil.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/DateUtil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/EnvUtils.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/EnvUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/EnvUtils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/KernelUtils.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/KernelUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/KernelUtils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/MathsUtils.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/MathsUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/MathsUtils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/Path.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/Path.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Path.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/RandomStringGenerator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/RandomStringGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/RandomStringGenerator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/RandomUtils.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/RandomUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/RandomUtils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/RegexUtils.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/RegexUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/RegexUtils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/SendByCurl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/SendByCurl.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/SendByCurl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/StringMan.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/StringMan.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/StringMan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/TokenGenerator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Utils/TokenGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/TokenGenerator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Validator/EntityValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlogBundle/src/Validator/EntityValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validator/EntityValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/migrations/build-phar.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/migrations/build-phar.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,22 +484,7 @@
     <pharConfigPath>$PROJECT_DIR$/BlogBundle/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlogBundle/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BlogBundle/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -150,11 +603,6 @@
               <item name="digital-blog-bundle" type="b2602c69:ProjectViewProjectNode" />
               <item name="digital-blog-bundle" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="digital-blog-bundle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="digital-blog-bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="BlogBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -169,6 +617,9 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/BlogBundle" />
     </key>
@@ -195,12 +646,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639575201223</updated>
-      <workItem from="1639575204132" duration="2638000" />
+      <workItem from="1639575204132" duration="3596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2638000" />
+    <option name="totallyTimeSpent" value="3596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="6" />
@@ -234,15 +685,19 @@
     <entry file="https://raw.githubusercontent.com/composer/composer/master/res/composer-schema.json">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogBundle/composer.json">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogBundle/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
