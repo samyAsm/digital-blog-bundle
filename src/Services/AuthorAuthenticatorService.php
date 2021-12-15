@@ -6,13 +6,13 @@
  * Time: 17:00
  */
 
-namespace Dhi\BlogBundle\Services;
+namespace DhiBlogBundle\Services;
 
 
-use Dhi\BlogBundle\Annotations\Auth;
-use Dhi\BlogBundle\Entity\Author;
-use Dhi\BlogBundle\Utils\DateUtil;
-use Dhi\BlogBundle\Utils\RandomUtils;
+use DhiBlogBundle\Annotations\Auth;
+use DhiBlogBundle\Entity\Author;
+use DhiBlogBundle\Utils\DateUtil;
+use DhiBlogBundle\Utils\RandomUtils;
 use Doctrine\ORM\NonUniqueResultException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -84,7 +84,7 @@ class AuthorAuthenticatorService extends ManagerService
     }
 
     /**
-     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
+     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
      * @throws \Exception
      */
     public function closeSession()
@@ -95,7 +95,7 @@ class AuthorAuthenticatorService extends ManagerService
 
     /**
      * @return mixed
-     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
+     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
      */
     protected function getTokenParam(): ?string
     {

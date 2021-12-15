@@ -4,10 +4,10 @@
  * Time: 12:13
  */
 
-namespace Dhi\BlogBundle\Core\Validations;
+namespace DhiBlogBundle\Core\Validations;
 
 
-use Dhi\BlogBundle\Service\EnvService;
+use DhiBlogBundle\Service\EnvService;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Contracts\Translation\TranslatorInterface;
 

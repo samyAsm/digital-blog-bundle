@@ -1,16 +1,16 @@
 <?php
 
-namespace Dhi\BlogBundle\Controller\Front;
+namespace DhiBlogBundle\Controller\Front;
 
-use Dhi\BlogBundle\Core\Controller\AbstractRESTController;
-use Dhi\BlogBundle\Responses\Article\Archives;
-use Dhi\BlogBundle\Responses\Article\CategoryArchives;
-use Dhi\BlogBundle\Responses\Article\SingleArticle;
-use Dhi\BlogBundle\Responses\ArticleComment\ArticleCommentStored;
-use Dhi\BlogBundle\Responses\ArticleComment\ArticleCommentStoreFail;
-use Dhi\BlogBundle\Services\Managers\ArticleCommentManagerService;
-use Dhi\BlogBundle\Services\Managers\ArticleManagerService;
-use Dhi\BlogBundle\Services\Managers\CategoryManagerService;
+use DhiBlogBundle\Core\Controller\AbstractRESTController;
+use DhiBlogBundle\Responses\Article\Archives;
+use DhiBlogBundle\Responses\Article\CategoryArchives;
+use DhiBlogBundle\Responses\Article\SingleArticle;
+use DhiBlogBundle\Responses\ArticleComment\ArticleCommentStored;
+use DhiBlogBundle\Responses\ArticleComment\ArticleCommentStoreFail;
+use DhiBlogBundle\Services\Managers\ArticleCommentManagerService;
+use DhiBlogBundle\Services\Managers\ArticleManagerService;
+use DhiBlogBundle\Services\Managers\CategoryManagerService;
 use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

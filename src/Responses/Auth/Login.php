@@ -6,10 +6,10 @@
  * Time: 16:09
  */
 
-namespace Dhi\BlogBundle\Responses\Auth;
+namespace DhiBlogBundle\Responses\Auth;
 
 
-use Dhi\BlogBundle\Core\Response\AbstractResponse;
+use DhiBlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class Login extends AbstractResponse

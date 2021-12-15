@@ -1,9 +1,9 @@
 <?php
 
-namespace Dhi\BlogBundle\Responses\ArticleComment;
+namespace DhiBlogBundle\Responses\ArticleComment;
 
 
-use Dhi\BlogBundle\Core\Response\AbstractResponse;
+use DhiBlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class ArticleCommentDeletionFail extends AbstractResponse

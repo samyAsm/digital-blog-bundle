@@ -1,9 +1,9 @@
 <?php
 
-namespace Dhi\BlogBundle\Repository;
+namespace DhiBlogBundle\Repository;
 
-use Dhi\BlogBundle\Core\Repository\CoreRepository;
-use Dhi\BlogBundle\Entity\ArticleCategory;
+use DhiBlogBundle\Core\Repository\CoreRepository;
+use DhiBlogBundle\Entity\ArticleCategory;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**

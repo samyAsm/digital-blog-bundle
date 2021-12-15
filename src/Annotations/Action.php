@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhi\BlogBundle\Annotations;
+namespace DhiBlogBundle\Annotations;
 
 /**
  * @Annotation

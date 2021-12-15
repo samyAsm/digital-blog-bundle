@@ -4,7 +4,7 @@
  * Time: 16:52
  */
 
-namespace Dhi\BlogBundle\Core\Data;
+namespace DhiBlogBundle\Core\Data;
 
 
 interface SerializableInterface

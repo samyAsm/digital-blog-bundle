@@ -4,11 +4,11 @@
  * Time: 16:44
  */
 
-namespace Dhi\BlogBundle\Core\Subscriber;
+namespace DhiBlogBundle\Core\Subscriber;
 
 
-use Dhi\BlogBundle\Core\Controller\AbstractRESTController;
-use Dhi\BlogBundle\Services\KernelService;
+use DhiBlogBundle\Core\Controller\AbstractRESTController;
+use DhiBlogBundle\Services\KernelService;
 use Doctrine\Common\Annotations\Reader;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 

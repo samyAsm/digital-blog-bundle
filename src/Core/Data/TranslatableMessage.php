@@ -4,7 +4,7 @@
  * Time: 16:02
  */
 
-namespace Dhi\BlogBundle\Core\Data;
+namespace DhiBlogBundle\Core\Data;
 
 
 use Symfony\Contracts\Translation\TranslatableInterface;

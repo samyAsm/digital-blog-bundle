@@ -4,18 +4,18 @@
  * Time: 11:01
  */
 
-namespace Dhi\BlogBundle\Services\Managers;
+namespace DhiBlogBundle\Services\Managers;
 
 
-use Dhi\BlogBundle\Core\Data\ValuesRetrieverTrait;
-use Dhi\BlogBundle\Core\Exceptions\Alert;
-use Dhi\BlogBundle\Entity\Article;
-use Dhi\BlogBundle\Entity\ArticleCategory;
-use Dhi\BlogBundle\Entity\Category;
-use Dhi\BlogBundle\Services\DirectoryService;
-use Dhi\BlogBundle\Services\FileUploadService;
-use Dhi\BlogBundle\Services\ManagerService;
-use Dhi\BlogBundle\Services\RepositoryService;
+use DhiBlogBundle\Core\Data\ValuesRetrieverTrait;
+use DhiBlogBundle\Core\Exceptions\Alert;
+use DhiBlogBundle\Entity\Article;
+use DhiBlogBundle\Entity\ArticleCategory;
+use DhiBlogBundle\Entity\Category;
+use DhiBlogBundle\Services\DirectoryService;
+use DhiBlogBundle\Services\FileUploadService;
+use DhiBlogBundle\Services\ManagerService;
+use DhiBlogBundle\Services\RepositoryService;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\Translation\TranslatorInterface;

@@ -4,14 +4,14 @@
  * Time: 16:56
  */
 
-namespace Dhi\BlogBundle\Controller\Back;
+namespace DhiBlogBundle\Controller\Back;
 
 
-use Dhi\BlogBundle\Annotations\MustAuthenticate;
-use Dhi\BlogBundle\Core\Controller\CoreController;
-use Dhi\BlogBundle\Responses\Author\AuthorForm;
-use Dhi\BlogBundle\Responses\Author\DeleteAuthor;
-use Dhi\BlogBundle\Services\Managers\AuthorManagerService;
+use DhiBlogBundle\Annotations\MustAuthenticate;
+use DhiBlogBundle\Core\Controller\CoreController;
+use DhiBlogBundle\Responses\Author\AuthorForm;
+use DhiBlogBundle\Responses\Author\DeleteAuthor;
+use DhiBlogBundle\Services\Managers\AuthorManagerService;
 use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

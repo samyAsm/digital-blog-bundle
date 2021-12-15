@@ -4,12 +4,12 @@
  * Time: 08:26
  */
 
-namespace Dhi\BlogBundle\Twig;
+namespace DhiBlogBundle\Twig;
 
-use Dhi\BlogBundle\Services\AuthorAuthenticatorService;
-use Dhi\BlogBundle\Services\EnvService;
-use Dhi\BlogBundle\Services\RepositoryService;
-use Dhi\BlogBundle\Utils\KernelUtils;
+use DhiBlogBundle\Services\AuthorAuthenticatorService;
+use DhiBlogBundle\Services\EnvService;
+use DhiBlogBundle\Services\RepositoryService;
+use DhiBlogBundle\Utils\KernelUtils;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Extension\AbstractExtension;

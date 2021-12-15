@@ -4,18 +4,18 @@
  * Time: 16:56
  */
 
-namespace Dhi\BlogBundle\Controller\Back;
+namespace DhiBlogBundle\Controller\Back;
 
-use Dhi\BlogBundle\Annotations\MustAuthenticate;
-use Dhi\BlogBundle\Core\Controller\CoreController;
-use Dhi\BlogBundle\Responses\Author\AuthorDeleted;
-use Dhi\BlogBundle\Responses\Author\AuthorDeletionFail;
-use Dhi\BlogBundle\Responses\Author\AuthorList;
-use Dhi\BlogBundle\Responses\Author\AuthorStored;
-use Dhi\BlogBundle\Responses\Author\AuthorStoreFail;
-use Dhi\BlogBundle\Services\MailingService;
-use Dhi\BlogBundle\Services\Managers\AuthorManagerService;
-use Dhi\BlogBundle\Utils\RandomUtils;
+use DhiBlogBundle\Annotations\MustAuthenticate;
+use DhiBlogBundle\Core\Controller\CoreController;
+use DhiBlogBundle\Responses\Author\AuthorDeleted;
+use DhiBlogBundle\Responses\Author\AuthorDeletionFail;
+use DhiBlogBundle\Responses\Author\AuthorList;
+use DhiBlogBundle\Responses\Author\AuthorStored;
+use DhiBlogBundle\Responses\Author\AuthorStoreFail;
+use DhiBlogBundle\Services\MailingService;
+use DhiBlogBundle\Services\Managers\AuthorManagerService;
+use DhiBlogBundle\Utils\RandomUtils;
 use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

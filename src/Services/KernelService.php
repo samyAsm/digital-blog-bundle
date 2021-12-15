@@ -4,7 +4,7 @@
  * Time: 17:32
  */
 
-namespace Dhi\BlogBundle\Services;
+namespace DhiBlogBundle\Services;
 
 
 use Symfony\Component\HttpKernel\Kernel;

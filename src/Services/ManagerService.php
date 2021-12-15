@@ -1,8 +1,8 @@
 <?php
 
-namespace Dhi\BlogBundle\Services;
+namespace DhiBlogBundle\Services;
 
-use Dhi\BlogBundle\Core\Entity\CoreEntity;
+use DhiBlogBundle\Core\Entity\CoreEntity;
 use Doctrine\Persistence\ManagerRegistry;
 
 class ManagerService

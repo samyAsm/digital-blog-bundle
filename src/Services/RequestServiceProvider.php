@@ -4,7 +4,7 @@
  * Time: 08:24
  */
 
-namespace Dhi\BlogBundle\Services;
+namespace DhiBlogBundle\Services;
 
 
 use Symfony\Component\HttpFoundation\Request;

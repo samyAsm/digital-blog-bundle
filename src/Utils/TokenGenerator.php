@@ -4,7 +4,7 @@
  * Time: 16:10
  */
 
-namespace Dhi\BlogBundle\Utils;
+namespace DhiBlogBundle\Utils;
 
 
 class TokenGenerator

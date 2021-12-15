@@ -6,25 +6,25 @@
  * Time: 11:13
  */
 
-namespace Dhi\BlogBundle\Controller\Front;
+namespace DhiBlogBundle\Controller\Front;
 
 
-use Dhi\BlogBundle\Core\Controller\CoreController;
-use Dhi\BlogBundle\Core\Exceptions\Alert;
-use Dhi\BlogBundle\Entity\Author;
-use Dhi\BlogBundle\Responses\Auth\LoggedOutSuccessfully;
-use Dhi\BlogBundle\Responses\Auth\LoggedSuccessfully;
-use Dhi\BlogBundle\Responses\Auth\Login;
-use Dhi\BlogBundle\Responses\Auth\LoginFail;
-use Dhi\BlogBundle\Responses\Auth\ResetPasswordConfirm;
-use Dhi\BlogBundle\Responses\Auth\ResetPasswordCodeFail;
-use Dhi\BlogBundle\Responses\Auth\ResetPasswordCodeSentSuccessfully;
-use Dhi\BlogBundle\Responses\Auth\ResetPasswordDoneSuccessfully;
-use Dhi\BlogBundle\Responses\Auth\ResetPasswordFail;
-use Dhi\BlogBundle\Responses\Auth\ResetPasswordRequestForm;
-use Dhi\BlogBundle\Services\AuthorAuthenticatorService;
-use Dhi\BlogBundle\Services\MailingService;
-use Dhi\BlogBundle\Utils\RandomUtils;
+use DhiBlogBundle\Core\Controller\CoreController;
+use DhiBlogBundle\Core\Exceptions\Alert;
+use DhiBlogBundle\Entity\Author;
+use DhiBlogBundle\Responses\Auth\LoggedOutSuccessfully;
+use DhiBlogBundle\Responses\Auth\LoggedSuccessfully;
+use DhiBlogBundle\Responses\Auth\Login;
+use DhiBlogBundle\Responses\Auth\LoginFail;
+use DhiBlogBundle\Responses\Auth\ResetPasswordConfirm;
+use DhiBlogBundle\Responses\Auth\ResetPasswordCodeFail;
+use DhiBlogBundle\Responses\Auth\ResetPasswordCodeSentSuccessfully;
+use DhiBlogBundle\Responses\Auth\ResetPasswordDoneSuccessfully;
+use DhiBlogBundle\Responses\Auth\ResetPasswordFail;
+use DhiBlogBundle\Responses\Auth\ResetPasswordRequestForm;
+use DhiBlogBundle\Services\AuthorAuthenticatorService;
+use DhiBlogBundle\Services\MailingService;
+use DhiBlogBundle\Utils\RandomUtils;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;

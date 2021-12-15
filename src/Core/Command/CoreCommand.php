@@ -4,7 +4,7 @@
  * Time: 13:21
  */
 
-namespace Dhi\BlogBundle\Core\Command;
+namespace DhiBlogBundle\Core\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\HttpKernel\Kernel;

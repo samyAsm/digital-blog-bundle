@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Dhi\BlogBundle\Utils;
+namespace DhiBlogBundle\Utils;
 
 /**
  * Description of SendByCurl

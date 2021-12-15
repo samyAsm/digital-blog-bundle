@@ -4,17 +4,17 @@
  * Time: 16:56
  */
 
-namespace Dhi\BlogBundle\Controller\Back;
+namespace DhiBlogBundle\Controller\Back;
 
-use Dhi\BlogBundle\Annotations\MustAuthenticate;
-use Dhi\BlogBundle\Core\Controller\CoreController;
-use Dhi\BlogBundle\Core\Exceptions\Alert;
-use Dhi\BlogBundle\Responses\Category\CategoryDeleted;
-use Dhi\BlogBundle\Responses\Category\CategoryDeletionFail;
-use Dhi\BlogBundle\Responses\Category\CategoryList;
-use Dhi\BlogBundle\Responses\Category\CategoryStored;
-use Dhi\BlogBundle\Responses\Category\CategoryStoreFail;
-use Dhi\BlogBundle\Services\Managers\CategoryManagerService;
+use DhiBlogBundle\Annotations\MustAuthenticate;
+use DhiBlogBundle\Core\Controller\CoreController;
+use DhiBlogBundle\Core\Exceptions\Alert;
+use DhiBlogBundle\Responses\Category\CategoryDeleted;
+use DhiBlogBundle\Responses\Category\CategoryDeletionFail;
+use DhiBlogBundle\Responses\Category\CategoryList;
+use DhiBlogBundle\Responses\Category\CategoryStored;
+use DhiBlogBundle\Responses\Category\CategoryStoreFail;
+use DhiBlogBundle\Services\Managers\CategoryManagerService;
 use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

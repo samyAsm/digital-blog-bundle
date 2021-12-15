@@ -4,7 +4,7 @@
  * Time: 14:03
  */
 
-namespace Dhi\BlogBundle\Utils;
+namespace DhiBlogBundle\Utils;
 
 
 class StringMan

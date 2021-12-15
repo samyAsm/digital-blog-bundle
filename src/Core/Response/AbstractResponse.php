@@ -4,11 +4,11 @@
  * Time: 09:56
  */
 
-namespace Dhi\BlogBundle\Core\Response;
+namespace DhiBlogBundle\Core\Response;
 
 
-use Dhi\BlogBundle\Core\Data\APIResponse;
-use Dhi\BlogBundle\Utils\KernelUtils;
+use DhiBlogBundle\Core\Data\APIResponse;
+use DhiBlogBundle\Utils\KernelUtils;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;

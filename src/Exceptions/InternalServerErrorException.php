@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dhi\BlogBundle\Exceptions;
+namespace DhiBlogBundle\Exceptions;
 
 
 use Exception;

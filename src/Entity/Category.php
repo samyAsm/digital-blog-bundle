@@ -1,9 +1,9 @@
 <?php
 
-namespace Dhi\BlogBundle\Entity;
+namespace DhiBlogBundle\Entity;
 
-use Dhi\BlogBundle\Core\Entity\CoreEntity;
-use Dhi\BlogBundle\Repository\CategoryRepository;
+use DhiBlogBundle\Core\Entity\CoreEntity;
+use DhiBlogBundle\Repository\CategoryRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;

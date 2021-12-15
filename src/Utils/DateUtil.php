@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dhi\BlogBundle\Utils;
+namespace DhiBlogBundle\Utils;
 
 
 use App\Core\Exceptions\Alert;

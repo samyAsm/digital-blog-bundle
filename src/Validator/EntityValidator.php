@@ -4,7 +4,7 @@
  * Time: 10:48
  */
 
-namespace Dhi\BlogBundle\Validator;
+namespace DhiBlogBundle\Validator;
 
 
 use Symfony\Component\Validator\ConstraintValidatorFactory;

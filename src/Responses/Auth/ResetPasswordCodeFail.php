@@ -6,10 +6,10 @@
  * Time: 16:09
  */
 
-namespace Dhi\BlogBundle\Responses\Auth;
+namespace DhiBlogBundle\Responses\Auth;
 
 
-use Dhi\BlogBundle\Core\Response\AbstractBadRequestResponse;
+use DhiBlogBundle\Core\Response\AbstractBadRequestResponse;
 use Twig\Error\LoaderError;
 
 class ResetPasswordCodeFail extends AbstractBadRequestResponse

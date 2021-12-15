@@ -6,7 +6,7 @@
  * Time: 14:57
  */
 
-namespace Dhi\BlogBundle\Services;
+namespace DhiBlogBundle\Services;
 
 
 class ConfigService

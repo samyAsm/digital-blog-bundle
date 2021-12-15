@@ -4,12 +4,12 @@
  * Time: 09:28
  */
 
-namespace Dhi\BlogBundle\Core\Controller;
+namespace DhiBlogBundle\Core\Controller;
 
-use Dhi\BlogBundle\Core\Data\ValuesRetrieverTrait;
-use Dhi\BlogBundle\Core\Entity\CoreEntity;
-use Dhi\BlogBundle\Services\KernelService;
-use Dhi\BlogBundle\Utils\RegexUtils;
+use DhiBlogBundle\Core\Data\ValuesRetrieverTrait;
+use DhiBlogBundle\Core\Entity\CoreEntity;
+use DhiBlogBundle\Services\KernelService;
+use DhiBlogBundle\Utils\RegexUtils;
 
 abstract class CoreController extends AbstractRESTController
 {

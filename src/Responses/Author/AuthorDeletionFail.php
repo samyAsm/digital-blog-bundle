@@ -1,9 +1,9 @@
 <?php
 
-namespace Dhi\BlogBundle\Responses\Author;
+namespace DhiBlogBundle\Responses\Author;
 
 
-use Dhi\BlogBundle\Core\Response\AbstractResponse;
+use DhiBlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class AuthorDeletionFail extends AbstractResponse

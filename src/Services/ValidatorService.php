@@ -4,11 +4,11 @@
  * Time: 18:26
  */
 
-namespace Dhi\BlogBundle\Services;
+namespace DhiBlogBundle\Services;
 
-use Dhi\BlogBundle\Core\Entity\CoreEntity;
-use Dhi\BlogBundle\Core\Exceptions\Alert;
-use Dhi\BlogBundle\Validator\EntityValidator;
+use DhiBlogBundle\Core\Entity\CoreEntity;
+use DhiBlogBundle\Core\Exceptions\Alert;
+use DhiBlogBundle\Validator\EntityValidator;
 use Symfony\Component\Validator\ConstraintViolation;
 use Symfony\Component\Validator\Validation;
 use Symfony\Contracts\Translation\TranslatorInterface;

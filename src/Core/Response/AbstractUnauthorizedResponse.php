@@ -4,10 +4,10 @@
  * Time: 09:56
  */
 
-namespace Dhi\BlogBundle\Core\Response;
+namespace DhiBlogBundle\Core\Response;
 
 
-use Dhi\BlogBundle\Core\Data\APIResponse;
+use DhiBlogBundle\Core\Data\APIResponse;
 
 abstract class AbstractUnauthorizedResponse extends AbstractResponse
 {

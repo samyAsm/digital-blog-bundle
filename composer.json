@@ -1,7 +1,7 @@
 {
   "name": "samyasm/digitalblogbundle",
-  "type": "library",
-  "description": "My-Coolpay payment gateway",
+  "type": "symfony-bundle",
+  "description": "Blog bundle",
   "keywords": ["digital","blog","blog-bundle","digital-house"],
   "homepage": "https://github.com/samyAsm/digital-blog-bundle.git",
   "license": "MIT",
@@ -37,12 +37,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Dhi\\BlogBundle\\": "src/"
+      "DhiBlogBundle\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Dhi\\BlogBundle\\": "src/"
+      "DhiBlogBundle\\": "src/"
     }
   }
 }

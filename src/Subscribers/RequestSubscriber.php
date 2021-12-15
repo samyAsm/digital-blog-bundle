@@ -6,10 +6,10 @@
  * Time: 16:42
  */
 
-namespace Dhi\BlogBundle\Subscribers;
+namespace DhiBlogBundle\Subscribers;
 
 
-use Dhi\BlogBundle\Services\KernelService;
+use DhiBlogBundle\Services\KernelService;
 use Exception;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Twig\Environment;

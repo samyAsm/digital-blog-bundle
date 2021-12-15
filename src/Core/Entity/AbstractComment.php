@@ -4,7 +4,7 @@
  * Time: 11:02
  */
 
-namespace Dhi\BlogBundle\Core\Entity;
+namespace DhiBlogBundle\Core\Entity;
 
 
 abstract class AbstractComment extends CoreEntity

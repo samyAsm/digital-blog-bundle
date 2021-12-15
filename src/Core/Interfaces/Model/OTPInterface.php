@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dhi\BlogBundle\Core\Interfaces\Model;
+namespace DhiBlogBundle\Core\Interfaces\Model;
 
 
 interface OTPInterface

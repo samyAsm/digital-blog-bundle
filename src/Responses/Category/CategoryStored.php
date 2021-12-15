@@ -4,10 +4,10 @@
  * Time: 15:41
  */
 
-namespace Dhi\BlogBundle\Responses\Category;
+namespace DhiBlogBundle\Responses\Category;
 
 
-use Dhi\BlogBundle\Core\Response\AbstractResponse;
+use DhiBlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class CategoryStored extends AbstractResponse

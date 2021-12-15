@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dhi\BlogBundle\Utils;
+namespace DhiBlogBundle\Utils;
 
 /**
  * Simple class to generate a random strong string value

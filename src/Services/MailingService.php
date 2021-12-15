@@ -6,10 +6,10 @@
  * Time: 11:21
  */
 
-namespace Dhi\BlogBundle\Services;
+namespace DhiBlogBundle\Services;
 
 
-use Dhi\BlogBundle\Entity\Author;
+use DhiBlogBundle\Entity\Author;
 use Swift_Message;
 use Twig\Error\LoaderError;
 
@@ -54,7 +54,7 @@ class MailingService
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
-     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
+     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
      */
     public function sendResetPasswordCode(Author $author)
     {
@@ -91,7 +91,7 @@ class MailingService
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
-     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
+     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
      */
     public function sendSettingPasswordCode(Author $author)
     {
