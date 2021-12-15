@@ -1,5 +1,5 @@
 {
-  "name": "samyasm/digitalblogbundle",
+  "name": "samyasm/dhi-blog-bundle",
   "type": "symfony-bundle",
   "description": "Blog bundle for symfony 4",
   "keywords": ["digital","blog","blog-bundle","digital-house"],
