@@ -1,49 +1,89 @@
-# mycoolpay-payment-gateway
+# DHI Blog bundle
 
-This package is made for developers who want to integrate my-coolpay payment 
-gateway on their php application.
+This bundle is made to facilitate basic blog integration inside symfony 4 apps
 
-The requirements are 
+It requires
 
-"php": ">=7.2"
+"php": ">=7.2",
 
-"ext-curl": "*"
+"ext-curl": "*",
 
-"ext-json": "*"
+"ext-json": "*",
+
+"doctrine/doctrine-bundle": "^2.1",
+
+"doctrine/orm": "^2.7",
+
+"nelmio/api-doc-bundle": "^3.0",
+
+"symfony/security-bundle": "4.4.*",
+
+"symfony/swiftmailer-bundle": "^3.4",
+
+"symfony/translation": "4.4.*",
+
+"symfony/validator": "4.4.*",
+
+"symfony/yaml": "4.4.*",
+
+"twig/twig": "^2.12|^3.0"
 
 ## Installation
 
 ```bash
-composer require samyasm/mycoolpay
+composer require samyasm/digitalblogbundle
 ```
-## Usage
+## Configurations
 
-For using this, you first need a merchant account on www.my-coolpay.com
+### Routing
 
-Then, after installing you must create a common class that will do custom process
-like DB logs after and before any interactions with the API.
-This class must extends the MyCoolPay\MCP class, and must implements the MyCoolPay\
-MCPInterface, then just define all methods on this class.
+Open ```config/routes.yaml``` and add this to configure routing to blog
 
-You can see example on The Test directory of the project.
+```
+digital_blog:
+  resource: '@DigitalBlogBundle/Resources/config/routes.yaml'
+  prefix: /blog/ 
+  #You can set any prefix you want :-)
+```
+
+### Bundle configuration
+
+create the file ```config/packages/digital_blog.yaml``` and put this content
+
+```
+digital_blog:
+  
+  assets:
+    logo: 'assets-front/assets/img/logo.png'
+    hero_bg: 'assets-app/images/banner.jpg'
+    
+  theme:
+    color_primary: '#7083ff'
+    color_secondary: '#f5ec78'
+    
+  routing:
+    prefix: '/v1/blog'
+  
+  store:
+    author_image_store: 'uploads/author/'
+    article_image_store: 'uploads/article/'
+    category_image_store: 'uploads/category/'
+```
+
+Open the file ```config/packages/security.yaml``` and add this content
+
+```
+security:
+    encoders:
+        # ...
+        
+        #Add encoder for Author entity, considered as users in administration
+        
+        DhiBlogBundle\Entity\Author:
+            algorithm: sha512
+            cost: 12
+```
+
+Make sure to have ```DhiBlogBundle\DigitalBlogBundle::class => ['all' => true],``` into ```config/bundles.php``` and add this content
 
 
-have 4 actions you can perform with your Custom MCP class
-
-##### 1. Pay (get paid by your customers)
-Can be performed with getPaymentLink method
-
-##### 2. Pay out (withdraw money from your account)
-Can be performed with payout method
-
-##### 3. Callback (Manage callback from My-CoolPay API)
-Can be performed with callback method
-
-##### 4. Check (Check transaction status on API)
-Can be performed with checkStatus method
-
-For all these methods, the first parameter is just the ones specified on the 
-API doc.
-
-
-***
