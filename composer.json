@@ -1,7 +1,7 @@
 {
   "name": "samyasm/digitalblogbundle",
   "type": "symfony-bundle",
-  "description": "Blog bundle",
+  "description": "Blog bundle for symfony 4",
   "keywords": ["digital","blog","blog-bundle","digital-house"],
   "homepage": "https://github.com/samyAsm/digital-blog-bundle.git",
   "license": "MIT",
