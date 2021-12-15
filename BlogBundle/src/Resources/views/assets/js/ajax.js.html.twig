@@ -1,0 +1,110 @@
+
+<script type="application/javascript">
+
+    $(document).ready(function () {
+        $('.ajax_form').ajaxForm();
+    });
+
+    /**
+     * Walk for global functions, not for object methods
+     * */
+    function handle(function_name) {
+        if (function_name !== undefined && function_name !== null) {
+            window[function_name]()
+        }
+    }
+
+    $.fn.ajaxForm = function () {
+
+        if ($(this).hasClass('reset_form')){
+            let t = $(this)
+            setTimeout(function () {
+                t.find('input[type=email]').val('')
+            },200)
+        }
+
+        $(this).on('keyup', '.submit-trigger', function (e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                e.stopPropagation();
+                //form.trigger('submit');
+            }
+        });
+
+        $(this).off('submit').on('submit', function (e) {
+
+            let form = $(this);
+
+            e.preventDefault();
+
+            let isMultipartForm = (form.attr('enctype') === "multipart/form-data");
+
+            let loadAjaxResponse = function (data) {
+                form.find('.form-response').html($(data));
+                form.find('.loader').addClass('d-none');
+                form.find('button[type=submit]').removeClass('d-none');
+                form.find('button[type=reset]').removeClass('d-none')
+            };
+
+            let getData = function () {
+
+                let data = new FormData();
+
+                if (isMultipartForm) {
+
+                    let ar;
+
+                    let array = form.serializeArray();
+
+                    for (let o in array) {
+                        ar = $.map(array[o], function (value, index) {
+                            return [value]
+                        });
+
+                        data.append(ar[0], ar[1])
+                    }
+
+                    let files = $(':input[type=file]');
+
+                    files.each(function () {
+                        data.append($(this).attr('name'), $(this)[0].files[0])
+                    });
+
+                    return data;
+                }
+
+                return form.serialize()
+            };
+
+
+            handle(form.attr('before-send'));
+
+            $(this).find('.form-response').html("");
+            $(this).find('.loader').removeClass('d-none');
+            form.find('button[type=submit]').addClass('d-none');
+            form.find('button[type=reset]').addClass('d-none');
+
+            setTimeout(function () {
+                $.ajax({
+                    type: "POST",
+                    url: form.attr('action'),
+                    contentType: false,
+                    processData: false,
+                    data: getData(), // serializes the form's elements.
+                    success: function (data) {
+                        loadAjaxResponse(data)
+                    },
+                    error: function (xhr) {
+                        loadAjaxResponse("<div class='alert-danger d-flex border-0 justify-content-center align-items-center p-2 text-center w-100'>" +
+                            "<i class='fas fa-exclamation-circle mr-1'></i> <b> " + xhr.responseText + "</b></div>")
+                    },
+                });
+            }, 200)
+        }).on('reset', function () {
+            $(this).find('.loader').addClass('d-none');
+            $(this).find('.btn-submit').removeClass('d-none');
+            $(this).find('.form-response').html("")
+        })
+    };
+
+</script>

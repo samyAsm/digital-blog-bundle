@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ app.request.locale }}">
+
+<head>
+
+    <link rel="icon" sizes="48x48" type="image/x-icon" href="{{ url('favicon.ico') }}">
+    <!-- Favicons -->
+    <link href="{{ asset('assets-front/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <meta name=viewport content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="content-language" content="fr"/>
+    <meta name="language" content="fr"/>
+    <meta name="geo.region" content="Cameroon Littoral +237"/>
+    <meta name="geo.placename" content="Douala"/>
+    <meta name="google-site-verification" content="2HWF_6cRP1iH9NeGn_HlmQA1J2P1tvwMA-zNNw8ga_s"/>
+    <meta property="og:description" content="{% block og_meta_description %}{% endblock %}"/>
+    <meta property="og:title" content="{% block og_meta_title %}digital-blog{% endblock %}"/>
+    <meta property="og:url" content="{% block og_meta_url %}https://digital-blog.com/{% endblock %}"/>
+    <meta property="og:type" content="{% block og_meta_type %}website{% endblock %}"/>
+    <meta property="og:locale" content="{% block og_meta_locale %}fr_CM{% endblock %}"/>
+    <meta property="og:locale:alternate" content="{% block og_meta_locale_alternate %}locale_alternate{% endblock %}"/>
+    <meta property="og:site_name" content="{% block og_meta_site_name %}digital-blog.com{% endblock %}"/>
+    <meta property="og:image"
+          content="{% block og_meta_image %}https://digital-blog.com/sources/images/logos/logo-512x512.png{% endblock %}"/>
+    <meta property="og:image:url"
+          content="{% block og_meta_image_url %}https://digital-blog.com/sources/images/logos/logo-512x512.png{% endblock %}"/>
+    <meta property="og:image:size" content="{% block og_meta_image_size %}1.9:1{% endblock %}"/>
+    <meta name="twitter:card" content="{% block twitter_meta_card %}digital-blog{% endblock %}"/>
+    <meta name="twitter:site" content="{% block twitter_meta_site %}https://twitter.com/digital-blog{% endblock %}"/>
+
+    <title>{% block page_title %} {{ "Digital blog"|trans }} {% endblock %}</title>
+
+    {% block headers_styles %}
+        {% include '@DigitalBlog/assets/css/main.css.html.twig' %}
+    {% endblock %}
+</head>
+
+<body>
+
+{% block main_layout %}
+    Main content
+{% endblock %}
+
+{% block footers_scripts %}
+    {% include '@DigitalBlog/assets/js/main.js.html.twig' %}
+{% endblock %}
+</body>
+
+</html>

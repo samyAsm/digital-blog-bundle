@@ -1,0 +1,112 @@
+{% extends '@DigitalBlog/parts/back_base.html.twig' %}
+
+{% block main_layout %}
+    <!-- Sidenav -->
+    <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white"
+         id="sidenav-main">
+
+        <div class="side-nav-content bg-white">
+            <!-- Brand -->
+            <div class="sidenav-header  align-items-center">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img src="{{ asset('assets-app/logos/logo.png') }}"
+                         class="navbar-brand-img" alt="...">
+                </a>
+            </div>
+            <div class="side-nav-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <ul class="tree-view list-unstyled d-flex flex-column {% block blog_active %}{% endblock %}">
+                            <li>
+                                <div class="tree-view-head">
+                                        <span class="nav-link text-indigo" style="cursor: pointer;">
+                                            <i class="fas fa-blog"></i>
+                                            <span class="nav-link-text">{{ "Blog"|trans }}</span>
+                                        </span>
+                                </div>
+                                <div class="tree-view-body pl-3">
+                                    <a class="nav-link text-indigo {% block blog_authors_active %}{% endblock %}"
+                                       href="{{ url('digital_blog_author_list') }}">
+                                        <i class="fas fa-pager"></i>
+                                        <span class="nav-link-text">{{ "Auteurs"|trans }}</span>
+                                    </a>
+                                    <a class="nav-link text-indigo {% block blog_articles_active %}{% endblock %}"
+                                       href="{{ url('digital_blog_article_list') }}">
+                                        <i class="fas fa-pager"></i>
+                                        <span class="nav-link-text">{{ "Articles"|trans }}</span>
+                                    </a>
+                                    <a class="nav-link text-indigo {% block blog_categories_active %}{% endblock %}"
+                                       href="{{ url('digital_blog_category_list') }}">
+                                        <i class="fas fa-list"></i>
+                                        <span class="nav-link-text">{{ "Catégories"|trans }}</span>
+                                    </a>
+                                    <a class="nav-link text-indigo {% block blog_comments_active %}{% endblock %}"
+                                       href="{{ url('digital_blog_article_comment_list') }}">
+                                        <i class="fas fa-comments"></i>
+                                        <span class="nav-link-text">{{ "Commentaires"|trans }}</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Topnav -->
+        {% include '@DigitalBlog/parts/back-navbar-top.html.twig' %}
+        <!-- Topnav -->
+
+        <!-- Header -->
+        <div class="header bg-theme-primary pb-6">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="row align-items-center py-4">
+                        <div class="col-lg-8 col-7">
+                            {% block breadcrunmb_display %}
+                                <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                                    <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                        <li class="breadcrumb-item">
+                                            <a class="text-theme-primary" href="{{ url('admin_home') }}">
+                                                <i class="fas fa-home"></i>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a class="text-theme-primary" href="{% block previous_url %}{% endblock previous_url %}">
+                                                {% block previous_page %}Dashboard{% endblock previous_page %}
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item active text-theme-secondary" aria-current="page">
+                                            {% block current_page %}{% endblock current_page %}
+                                        </li>
+                                    </ol>
+                                </nav>
+                            {% endblock breadcrunmb_display %}
+                        </div>
+                        <div class="col-lg-4 col-5 text-right d-{% block top_action_display %}{% endblock top_action_display %}">
+                            <a href="{% block top_action_link %}#{% endblock top_action_link %}"
+                               class="btn btn-sm btn-neutral {% block top_action_link_mode %}ajax_link{% endblock top_action_link_mode %}">
+                                {% block top_action_text %}New{% endblock top_action_text %}
+                            </a>
+                        </div>
+                    </div>
+
+                    {% block main_header %}{% endblock main_header %}
+
+                </div>
+            </div>
+        </div>
+        <!-- Header -->
+
+        <div class="container-fluid px-4" id="main-content"
+             style="background-color: rgb(252,252,252) !important;min-height: 70vh;">
+            {% block content %}{% endblock content %}
+        </div>
+
+        <!-- Footer -->
+
+        <!-- Footer -->
+    </div>
+{% endblock %}

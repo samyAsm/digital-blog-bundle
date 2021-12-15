@@ -1,0 +1,57 @@
+<div class="modal-form-container">
+    <div class="row h-100">
+        <div class="col mx-auto h-100">
+            <div class="card-modal">
+
+                <div class="card col-lg-5 col-md-8 py-4">
+                    {#Modal closer#}
+                    <span class="close-modal">x</span>
+
+                    <div class="card-header border-0 mb-3 py-0 text-center">
+                        <h1 class="text-black-50">{{ (article_comment is defined)?"Modifier la ressource "~article_comment.name:"Nouvelle ressource" }}</h1>
+                    </div>
+
+                    <form role="form" action="#" method="post" class="ajax_form" enctype="multipart/form-data">
+
+                        <input value="{{ (article_comment is defined)?article_comment.uniqKey:"" }}" name="article_comment_id" type="hidden">
+
+                        <div class="form-group">
+                            <div class="input-group custom-group input-group-merge input-group-alternative mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Nom</span>
+                                </div>
+                                <input class="form-control" value="{{ (resource is defined)?article_comment.name:"" }}"
+                                       placeholder="Rapport" name="name" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group custom-group input-group-merge input-group-alternative mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Fichier</span>
+                                </div>
+                                <input class="form-control" required
+                                       placeholder="Fichier source" name="source" type="file">
+
+                            </div>
+                            {% if resource is defined %}
+                                <div class="text-right text-primary small">
+                                    <a href="{{ url('api_resource_download', {resource_id: resource.uniqKey, resource_name: resource.sluggedName}) }}">
+                                        {{ resource.source }}
+                                    </a>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="text-center">
+                            <div class="form-response"></div>
+                            <button type="submit" class="btn btn-primary mt-4 btn-submit">Enregistrer</button>
+                            <div class="loader mx-auto my-3 d-none"></div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

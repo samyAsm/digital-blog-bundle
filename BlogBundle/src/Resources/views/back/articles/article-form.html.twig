@@ -1,0 +1,178 @@
+{% extends '@DigitalBlog/parts/back_layout.html.twig' %}
+
+{% block previous_url %}{{ url('admin_home') }}{% endblock previous_url %}
+
+{% block current_page %}Blog - Articles{% endblock current_page %}
+
+{% block top_action_display %}none{% endblock top_action_display %}
+
+{% block blog_articles_active %}active{% endblock %}
+{% block blog_active %}active{% endblock %}
+
+{% block page_title %}Offers - Admin | UKUZI{% endblock %}
+
+{% block footers_scripts %}
+    {{ parent() }}
+    {% include '@DigitalBlog/assets/js/summernote-setup.js.html.twig' %}
+    {% include '@DigitalBlog/assets/js/input-tags.js.html.twig' %}
+{% endblock %}
+
+{% block headers_styles %}
+    {% include '@DigitalBlog/assets/css/summernote.css.html.twig' %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col">
+            <div class="card col-lg-12 col-md-12 mx-auto py-lg-5 px-4" style="margin-top: -100px;">
+
+                <form role="form" action="{{ url('digital_blog_article_store') }}" method="post" class="ajax_form"
+                      enctype="multipart/form-data">
+
+                    <input value="{{ (article is defined)?article.uniqKey:"" }}" name="article_id" type="hidden">
+
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <div class="input-group custom-group input-group-merge input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Titre</span>
+                                    </div>
+                                    <input class="form-control" value="{{ (article is defined)?article.title:"" }}"
+                                           placeholder="Rapport" name="title" type="text">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group custom-group input-group-merge input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Slug</span>
+                                    </div>
+                                    <input class="form-control" value="{{ (article is defined)?article.slug:"" }}"
+                                           placeholder="slug-de-l-article" name="slug" type="text">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preview"
+                                       class="trombino-label mx-auto file-image editable mx-auto {{ (article is defined and article.preview)?'loaded':'' }}"
+                                       style="height: 360px;width: 100%;">
+                                    <div class="spinner-border text-primary mx-auto loader" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="previewer full" style="background-color: rgba(246,246,250,0.4);">
+                                        <img class="d-block mx-auto"
+                                             src="{{ (article is defined and article.preview)?asset(twig_p_article_image_path ~ article.preview):"" }}">
+                                    </div>
+                                    <span class="label-text">Image de mise en avant</span>
+                                    <span class="label-front">Modifier l'image de mise en avant</span>
+                                    <input type="file" name="preview" id="preview"
+                                           accept=".jpg, .png, .jpeg, .webp"
+                                           class="hidden-input">
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Editer le contenu de votre article</label>
+                                <textarea id="editor" name="content"
+                                          placeholder="{{ "Contenu de l'article"|trans }}">{{ (article is defined)?article.content:"" }}</textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="form-response"></div>
+                                <button type="submit" class="btn btn-outline-theme-primary mt-4 btn-submit">Enregistrer</button>
+                                <div class="loader mx-auto my-3 d-none"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4" style="max-height: 89vh;">
+
+                            <div class="form-group">
+
+                                <label for="status" class="">Statut</label>
+
+                                <select name="status" id="status" class="form-control">
+                                    {% for k, status in statuses %}
+                                        <option value="{{ k }}" {{ (article is defined and article.status == status)?"selected":"" }}>
+                                            {{ status }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="summary">Résumé</label>
+                                <textarea id="summary" required name="summary" class="form-control"
+                                          placeholder="{{ "Résumé"|trans }}">{{ (article is defined)?article.summary }}</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" name="allow_comment"
+                                       id="allow_comment" {{ (article is defined and article.allowComment)?"checked":"" }}>
+                                <label for="allow_comment">Activer les commentaires</label>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="" class="">Catégories</label>
+
+                                <div class="d-flex flex-column categories pl-0"
+                                     style="max-height: 300px;overflow-y: auto;">
+                                    {% for category in categories %}
+                                        <div class="col pl-0">
+                                            <input type="checkbox" name="categories[]"
+                                                   id="category-{{ category.uniqKey }}"
+                                                   value="{{ category.uniqKey }}"
+                                                    {{ (article is defined and article.inCategory(category))?'checked':'' }}>
+                                            <label for="category-{{ category.uniqKey }}" class="text-black-50">
+                                                {{ category.categoryName }}
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="summary">Mots clés (tags)</label>
+                                <div class='tag-manager mt-2'>
+                                    <div class='tags'>
+                                        {% if article is defined %}
+                                            {% for tag in article.tagList %}
+                                                <span class="tag" val="{{ tag }}">{{ tag }}<i
+                                                            class="fas fa-close"></i></span>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+
+                                    <input type="text" refer="tags"
+                                           placeholder="{{ "Exemple: Formation,Etudes"|trans }} ..."
+                                           class='input'/>
+                                </div>
+                                <input type="hidden" required id="tags" name="tags" class="input-hidden">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pixel_code">Traqueur (pixel)</label>
+                                <textarea id="pixel_code" name="pixel_code" class="form-control"
+                                          placeholder="{{ "Code du traqueur"|trans }}">{{ (article is defined)?article.pixelCode }}</textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="form-response"></div>
+                                <button type="submit" class="btn btn-outline-theme-primary mt-4 btn-submit">Enregistrer</button>
+                                <div class="loader mx-auto my-3 d-none"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

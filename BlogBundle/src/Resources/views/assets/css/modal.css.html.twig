@@ -1,0 +1,121 @@
+<style>
+
+    .modal-form-container {
+        z-index: 50000;
+        display: block;
+        position: fixed;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 22px;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        background-color: rgba(115, 112, 121, 0.53);
+        background-size: 120% 100%;
+    }
+
+    .loader-modal {
+        z-index: 50000;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        background-color: rgba(233, 225, 243, 0.35);
+    }
+
+    .loader-modal .loader {
+        border-top-color: var(--theme-primary);
+    }
+
+    .modal-form-container .card-modal {
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-form-container .card-modal > div {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        box-shadow: 0 0 5px 0 rgba(74,74,74,0.38) !important;
+        border-radius: 5px;
+        padding: 40px 30px 30px;
+    }
+
+    .close-modal {
+        z-index: 2;
+        font-size: 1.4rem;
+        color: #ff001b;
+        position: absolute;
+        cursor: pointer;
+        right: 10px;
+        top: 0;
+    }
+
+    .custom-group .input-group-prepend {
+        z-index: 2;
+    }
+
+    .custom-group .input-group-prepend .input-group-text {
+        color: #fff;
+        width: 100%;
+        min-width: 100px;
+        border-radius: 0;
+        font-size: .9rem !important;
+        border-color: var(--theme-secondary);
+        background-color: var(--theme-secondary);
+    }
+
+    .custom-group.date .input-group-prepend .input-group-text {
+        min-width: 30px;
+    }
+
+    .form-group label {
+        color: var(--theme-primary);
+    }
+
+    .custom-group, .custom-group * {
+        max-height: 40px;
+        overflow: hidden;
+    }
+
+    .custom-group input, .custom-group .form-control {
+        padding-left: 12px !important;
+        padding-right: 5px !important;
+        background-color: #fbfbfb !important;
+        max-height: 39px;
+        margin-right: 1px;
+        border: none !important;
+        box-shadow: 0 0 2px 0 rgba(177, 177, 177, 0.58) !important;
+    }
+
+    .custom-group div.form-control{
+        max-height: 40px;
+        border: none !important;
+    }
+
+    .custom-group input::placeholder {
+        color: rgba(191, 191, 191, 0.59);
+    }
+
+    .custom-group select {
+        padding-right: 12px;
+        padding-left: 12px !important;
+        background-color: #fff !important;
+    }
+
+    .input-group-prepend {
+        margin-top: 0 !important;
+    }
+</style>

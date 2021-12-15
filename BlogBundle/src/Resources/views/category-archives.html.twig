@@ -1,0 +1,77 @@
+{% extends '@DigitalBlog/parts/layout.html.twig' %}
+
+{% block page_title %}Blog | UKUZI{% endblock %}
+{% block og_meta_description %}{% endblock %}
+{% block og_meta_title %}{% endblock %}
+{% block og_meta_url %}{% endblock %}
+{% block og_meta_type %}{% endblock %}
+{% block og_meta_locale %}{% endblock %}
+{% block og_meta_locale_alternate %}{% endblock %}
+{% block og_meta_site_name %}{% endblock %}
+{% block og_meta_image %}{% endblock %}
+{% block og_meta_image_url %}{% endblock %}
+{% block og_meta_image_size %}{% endblock %}
+{% block twitter_meta_card %}{% endblock %}
+{% block twitter_meta_site %}{% endblock %}
+{% block active_blog %}active{% endblock %}
+
+{% block before_content %}
+    <!-- ======= Hero Section ======= -->
+    {% include '@DigitalBlog/parts/hero-category.html.twig' %}
+    <!-- End Hero -->
+{% endblock before_content %}
+
+{% block content %}
+
+    <section style="margin-top: 150px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mb-5 pt-5">
+                    {% for article in articles %}
+                        {% include '@DigitalBlog/parts/article-content.html.twig' %}
+                    {% endfor %}
+                </div>
+                <div class="col-lg-3 pl-lg-3 pt-5">
+
+                    <h5 class="head-aside">{{ "A la une"|trans }}</h5>
+
+                    <div class="row px-2">
+                        {% for blog_latest_article in blog_latest_articles() %}
+                            {% if blog_latest_article.articleCategories|length != 0 %}
+                                <a href="{{ url('digital_blog_article', { article_id: blog_latest_article.uniqKey, article_slug: blog_latest_article.slug }) }}" class="article-aside col-12 px-2 py-2 mb-3">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-4 col-md-3 col-4 article-thumb">
+                                            <img src="{{ (blog_latest_article.preview)?asset(twig_p_article_image_path ~ blog_latest_article.preview):"" }}" alt="">
+                                        </div>
+                                        <div class="col-lg-8 col-md-9 col-8 py-2">
+                                            <h5 class="text-theme-primary">
+                                                {{ blog_latest_article.title }}
+                                            </h5>
+                                            <span class="small text-black-50">{{ blog_latest_article.publishedAt|date("d M Y") }}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <h5 class="head-aside mt-4">{{ "Catégories"|trans }}</h5>
+
+                    <div class="row px-2 pb-5">
+                        {% for blog_category in blog_categories() %}
+                            {% if blog_category.articleCategories|length != 0 %}
+                                <a href="{{ url('digital_blog_article_by_category', { category_id: blog_category.uniqKey, category_name: blog_category.categoryName }) }}"
+                                   class="aside-category mb-2 col-12">
+                                    {{ blog_category.categoryName }}
+                                    ({{ blog_category.articleCategories|length }})
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

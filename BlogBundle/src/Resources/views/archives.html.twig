@@ -1,0 +1,73 @@
+{% extends '@DigitalBlog/parts/layout.html.twig' %}
+
+{% block page_title %}Blog | UKUZI{% endblock %}
+{% block og_meta_description %}{% endblock %}
+{% block og_meta_title %}{% endblock %}
+{% block og_meta_url %}{% endblock %}
+{% block og_meta_type %}{% endblock %}
+{% block og_meta_locale %}{% endblock %}
+{% block og_meta_locale_alternate %}{% endblock %}
+{% block og_meta_site_name %}{% endblock %}
+{% block og_meta_image %}{% endblock %}
+{% block og_meta_image_url %}{% endblock %}
+{% block og_meta_image_size %}{% endblock %}
+{% block twitter_meta_card %}{% endblock %}
+{% block twitter_meta_site %}{% endblock %}
+{% block active_blog %}active{% endblock %}
+
+{% block active_blog %}active{% endblock %}
+
+{% block before_content %}
+    <!-- ======= Hero Section ======= -->
+    {% include '@DigitalBlog/parts/hero.html.twig' %}
+    <!-- End Hero -->
+{% endblock before_content %}
+
+{% block content %}
+
+    <section style="margin-top: 150px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mb-5 pt-5">
+
+                    <h1 class="head-aside">{{ "A la une"|trans }}</h1>
+
+                    <div class="row">
+                        {% for article in articles %}
+                            {% include '@DigitalBlog/parts/article-content.html.twig' %}
+                        {% endfor %}
+
+                    </div>
+
+                    {% if next_page %}
+                        <div class="oldest-articles mt-5 d-flex justify-content-end">
+                            {{ current }} {{ total }} {{ limit }}
+                            <a href="{{ url('digital_blog_home') }}?page={{ page }}">
+                                {{ "Les plus anciens"|trans }}
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-lg-3 pl-lg-3">
+                    <div class="d-block mt-5 pt-5 pt-1">
+                        <h3 class="head-aside mt-4">{{ "Catégories"|trans }}</h3>
+
+                        <div class="row px-3">
+                            {% for blog_category in blog_categories() %}
+                                {% if blog_category.articleCategories|length != 0 %}
+                                    <a href="{{ url('digital_blog_article_by_category', { category_id: blog_category.uniqKey, category_name: blog_category.categoryName }) }}"
+                                       class="aside-category col-md-12 mb-2">
+                                        {{ blog_category.categoryName }}
+                                        ({{ blog_category.articleCategories|length }})
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

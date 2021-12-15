@@ -1,0 +1,45 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+
+{% include '@DigitalBlog/assets/js/ajax.js.html.twig' %}
+
+<script type="application/javascript">
+
+    $(document).ready(function () {
+
+        console.log("Dhi blog bundle")
+
+        $('.datatable').each(function () {
+            let table = $(this);
+
+            let datatable = $(this).DataTable({
+                "pagingType": "numbers",
+                "lengthMenu": [15, 25, 50, "All"]
+            });
+
+            table.find('thead th').append('<input type="text">');
+
+            table.find('thead th input').each(function () {
+
+                let t = $(this).parent().text();
+
+                $(this).attr('placeholder', t).css('width', $(this).parent().width() + 10)
+
+                $(this).parent().html($(this))
+
+                $(this).on('click', function (e) {
+                    e.stopPropagation()
+                }).on('keyup', function () {
+                    datatable.search($(this).val()).draw();
+                });
+            })
+
+        })
+
+    })
+
+</script>

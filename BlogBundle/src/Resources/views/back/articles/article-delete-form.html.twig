@@ -1,0 +1,36 @@
+<div class="modal-form-container">
+    <div class="row h-100">
+        <div class="col mx-auto h-100">
+            <div class="card-modal">
+
+                <div class="card col-lg-5 col-md-8 py-4">
+                    {#Modal closer#}
+                    <span class="close-modal">x</span>
+
+                    <div class="card-header border-0 mb-3 py-0 text-center">
+                        <h1 class="text-black-50">Supprimer l'article <span class="text-danger">{{ article.title }}</span></h1>
+                    </div>
+
+                    <form role="form" action="{{ url('digital_blog_article_delete') }}" method="post" class="ajax_form">
+
+                        <input value="{{ article.uniqKey }}" name="article_id" type="hidden">
+
+                        <div class="alert alert-secondary text-center">
+                            Souhaitez-vous vraiment supprimer cet article ?
+                        </div>
+
+                        <div class="text-center">
+                            <div class="form-response"></div>
+                            <div class="row justify-content-center">
+                                <button type="reset" class="btn btn-light mt-4 mx-3">ANNULER</button>
+                                <button type="submit" class="btn btn-danger mt-4 mx-3 btn-submit">SUPPRIMER</button>
+                            </div>
+                            <div class="loader mx-auto my-3 d-none"></div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

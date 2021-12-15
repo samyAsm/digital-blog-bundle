@@ -1,0 +1,42 @@
+<div class="col-lg-12 mb-4">
+    <div class="archive-article">
+        <div class="row">
+            <div class="col-md-6 article-preview">
+                <img src="{{ (article.preview)?asset(twig_p_article_image_path ~ article.preview):asset(twig_p_category_image_path ~ category.preview) }}" alt="#">
+                <div class="article-date">
+                    <div class="day">{{ article.publishedAt|date('d') }}</div>
+                    <div class="month">{{ article.publishedAt|date('m') }}</div>
+                </div>
+            </div>
+            <div class="col-md-6 article-content">
+                <div class="article-info">
+                    <div class="info">
+                        <i class="fas fa-user"></i>
+                        {% if article.author %}
+                            <span class="pl-2">{{ article.author.authorName }}</span>
+                        {% else %}
+                            <span class="pl-2">{{ "Inconnu"|trans }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="info">
+                        <i class="fas fa-comments"></i>
+                        <span>{{ "Commentaires"|trans }} ({{ article.comments|length }})</span>
+                    </div>
+                </div>
+                <div class="article-title">
+                    <h2>{{ article.title }}</h2>
+                </div>
+                <div class="article-summary">
+                    <p>
+                        {{ article.summary|slice(0, 250) }} ...
+                    </p>
+
+                    <a href="{{ url('digital_blog_article', { article_id: article.uniqKey, article_slug: article.slug }) }}">
+                        {{ "Lire la suite"|trans }}
+                        <i class="fas fa-angle-double-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

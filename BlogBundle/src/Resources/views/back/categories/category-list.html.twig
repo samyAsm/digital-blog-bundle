@@ -1,0 +1,87 @@
+{% extends '@DigitalBlog/parts/back_layout.html.twig' %}
+
+{% block previous_url %}{{ url('admin_home') }}{% endblock previous_url %}
+
+{% block current_page %}Catégories{% endblock current_page %}
+
+{% block top_action_link %} {{ url('digital_blog_category_edit', {category_id: 'new'}) }} {% endblock top_action_link %}
+
+{% block blog_active %}active{% endblock %}
+{% block blog_categories_active %}active{% endblock %}
+
+{% block page_title %}Blog - Catégories | UKUZI{% endblock %}
+
+{% block content %}
+
+    <div class="row mt--6">
+        <div class="col">
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header border-0">
+                    <h3 class="mb-0">Liste des catégories</h3>
+                </div>
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush datatable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th style="max-width: 15px;">N°</th>
+                            <th scope="col" class="sort">IMG</th>
+                            <th scope="col" class="sort">Nom</th>
+                            <th scope="col" class="sort">Parent</th>
+                            <th scope="col" class="sort">Description</th>
+                            <th scope="col" class="sort">Date création</th>
+                            <th scope="col" class="sort">Date Modif.</th>
+                            <th scope="col" class="text-right">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody class="list">
+                        {% for k,category in categories %}
+                            <tr>
+                                <td style="max-width: 15px;">{{ k+1 }}</td>
+                                <td>
+                                    <img class="d-block mx-auto" style="border-radius: 3px;height: 40px;width: 60px;object-fit: cover"
+                                         src="{{ (category.preview)?asset(twig_p_category_image_path ~ category.preview):"" }}">
+                                </td>
+                                <th class="text-left col-4">
+                                    {{ category.categoryName }}
+                                </th>
+                                <th class="text-left col-4">
+                                    {% if category.parentCategory %}
+                                        {{ category.parentCategory.categoryName }}
+                                    {% else %}
+                                        <span class="text-black-50">Aucune</span>
+                                    {% endif %}
+                                </th>
+                                <th class="col-2" title="{{ category.description }}">
+                                    {{ category.description|slice(0,100) }}
+                                </th>
+                                <td class="col">
+                                    {{ category.createdAt|date('Y-m-d H:i') }}
+                                </td>
+                                <td class="col">
+                                    {{ category.updatedAt|date('Y-m-d H:i') }}
+                                </td>
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                                           data-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item ajax_link" href="{{ url('digital_blog_category_edit', {category_id: category.uniqKey}) }}">Modifier</a>
+                                            <a class="dropdown-item ajax_link" href="{{ url('digital_blog_category_delete_form', {category_id: category.uniqKey}) }}">Supprimer</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+<div class="m-0 p-0">
+    <a id="redirect_link"
+       class="text-success d-block mx-auto my-0"
+       href="{{ url('digital_blog_category_list') }}">
+        Succès <i class="fas fa-check-circle"></i>
+    </a>
+</div>
+
+<script>
+    setTimeout(function () {
+        window.location = document.querySelector("#redirect_link").getAttribute('href');
+    }, 500)
+</script>

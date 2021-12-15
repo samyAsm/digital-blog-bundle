@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ app.request.locale }}">
+
+<head>
+    <link rel="icon" sizes="48x48" type="image/x-icon" href="{{ url('favicon.ico') }}">
+    <meta name=viewport content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="content-language" content="fr"/>
+    <meta name="language" content="fr"/>
+
+    <title>{% block page_title %} {{ "UKUZI"|trans }} {% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="icon" href="#" type="image/png">
+
+    {% block headers_styles %}
+        {% include '@DigitalBlog/assets/css/back_main.css.html.twig' %}
+    {% endblock %}
+
+</head>
+
+<body style="overflow-x: hidden">
+<div id="main-content-fluid">
+
+    {% block main_layout %}
+
+    {% endblock %}
+
+</div>
+<div id="form-modal-zone">
+
+</div>
+
+{% block footers_scripts %}
+    {% include '@DigitalBlog/assets/js/back_main.js.html.twig' %}
+{% endblock %}
+</body>
+
+</html>

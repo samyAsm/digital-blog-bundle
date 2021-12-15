@@ -1,0 +1,48 @@
+
+{% include '@DigitalBlog/parts/navbar-top.html.twig' %}
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white pt-0"
+     style="height: 65px;box-shadow: 0 0 3px 0 rgba(117,117,117,0.24);top: 30px;">
+    <div class="container" style="height: 65px;">
+        <a class="navbar-brand" href="#" style="height: 65px;z-index: 3;">
+            {% include '@DigitalBlog/parts/logo.html.twig' %}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse bg-white" id="navbarSupportedContent">
+            <ul class="navbar-nav pt-1">
+                {% for parent_category in parent_blog_categories() %}
+                    {% if parent_category.articleCategories|length != 0 %}
+
+                        {% if parent_category.childCategories|length != 0 %}
+                            <li class="nav-item dropdown mr-2">
+                                <a class="nav-link dropdown-toggle" href="#"
+                                   id="navbarDropdown-{{ parent_category.uniqKey }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ parent_category.categoryName }}
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ parent_category.uniqKey }}">
+                                    {% for child_category in parent_category.childCategories %}
+                                        {% if child_category.articleCategories|length != 0 %}
+                                            <a class="dropdown-item" href="{{ url('digital_blog_article_by_category', { category_id: child_category.uniqKey, category_name: child_category.categoryName }) }}" class="nav-menu-item">
+                                                {{ child_category.categoryName }}
+                                            </a>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('digital_blog_article_by_category', { category_id: parent_category.uniqKey, category_name: parent_category.categoryName }) }}">
+                                    {{ parent_category.categoryName }}
+                                </a>
+                            </li>
+                        {% endif %}
+
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

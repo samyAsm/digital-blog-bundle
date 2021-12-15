@@ -1,0 +1,87 @@
+{% extends '@DigitalBlog/parts/back_layout.html.twig' %}
+
+{% block previous_url %}{{ url('admin_home') }}{% endblock previous_url %}
+
+{% block current_page %}Blog - Articles{% endblock current_page %}
+
+{% block top_action_link %} {{ url('digital_blog_author_edit', {author_id: 'new'}) }} {% endblock top_action_link %}
+
+{% block blog_authors_active %}active{% endblock %}
+{% block blog_active %}active{% endblock %}
+
+{% block page_title %}Offers - Admin | UKUZI{% endblock %}
+
+{% block content %}
+
+    <div class="row mt--6">
+        <div class="col">
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header border-0">
+                    <h3 class="mb-0">Liste des auteurs</h3>
+                </div>
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush datatable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th style="max-width: 15px;">N°</th>
+                            <th scope="col" class="sort" style="max-width: 70px">image</th>
+                            <th scope="col" class="sort">Auteur</th>
+                            <th scope="col" class="sort">A  propos</th>
+                            <th scope="col" class="sort">Email</th>
+                            <th scope="col" class="sort">Peut publier</th>
+                            <th scope="col" class="sort">Articles</th>
+                            <th scope="col" class="text-right">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody class="list">
+                        {% for k,author in authors %}
+                            <tr>
+                                <td style="max-width: 15px;">{{ k+1 }}</td>
+                                <th class="text-center" style="max-width: 70px">
+                                    <img class="d-block mx-auto" style="width: 40px;height: 40px;border-radius: 50%"
+                                         src="{{ (author is defined and author.profilePicture)?asset(twig_p_author_image_path ~ author.profilePicture):"" }}">
+                                </th>
+                                <th class="text-left col-4">
+                                    {{ author.authorName }}
+                                </th>
+                                <th class="col-2">
+                                    {{ author.description }}
+                                </th>
+                                <th class="col-2">
+                                    {{ author.email??"---" }}
+                                </th>
+                                <td class="col-2">
+                                    {% if author.canPublish %}
+                                        {{ "OUI"|trans }}
+                                    {% else %}
+                                        {{ "NON"|trans }}
+                                    {% endif %}
+                                </td>
+                                <th class="col-2">
+                                    {{ author.articles|length }}
+                                </th>
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                                           data-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item ajax_link" href="{{ url('digital_blog_author_edit', {author_id: author.uniqKey}) }}">Modifier</a>
+                                            <a class="dropdown-item ajax_link" href="{{ url('digital_blog_author_delete_form', {author_id: author.uniqKey}) }}">Supprimer</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

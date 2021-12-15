@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="dhi_blog_service.blog_service" class="Dhi\BlogBundle\Services\BlogService" autowire="true" public="true" />
+
+        <service id="Dhi\BlogBundle\Services\BlogService" alias="dhi_blog_service.blog_service" />
+
+
+        <!--Controllers services-->
+
+        <!--Test controller -->
+
+        <service id="dhi_blog_service.test_controller" class="Dhi\BlogBundle\Controller\Test\TestController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Test\TestController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <!--End Test-->
+
+        <service id="dhi_blog_controller.blog_controller" class="Dhi\BlogBundle\Controller\Front\BlogController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Front\BlogController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.auth_controller" class="Dhi\BlogBundle\Controller\Front\AuthController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Front\AuthController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.category_controller" class="Dhi\BlogBundle\Controller\Back\CategoryController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Back\CategoryController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.category_view_controller" class="Dhi\BlogBundle\Controller\Back\CategoryViewController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Back\CategoryViewController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.article_comment_controller" class="Dhi\BlogBundle\Controller\Back\ArticleCommentController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Back\ArticleCommentController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.article_comment_view_controller" class="Dhi\BlogBundle\Controller\Back\ArticleCommentViewController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Back\ArticleCommentViewController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.article_controller" class="Dhi\BlogBundle\Controller\Back\ArticleController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Back\ArticleController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.article_view_controller" class="Dhi\BlogBundle\Controller\Back\ArticleViewController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Back\ArticleViewController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.author_controller" class="Dhi\BlogBundle\Controller\Back\AuthorController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Back\AuthorController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service id="dhi_blog_controller.author_view_controller" class="Dhi\BlogBundle\Controller\Back\AuthorViewController" autowire="true" public="true"/>
+
+        <service id="Dhi\BlogBundle\Controller\Back\AuthorViewController"  autowire="true" public="true">
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <!--End Controller services-->
+
+        <!--Managers-->
+
+        <service id="dhi_blog_managers.category_manager" class="Dhi\BlogBundle\Services\Managers\CategoryManagerService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\Managers\CategoryManagerService" alias="dhi_blog_managers.category_manager" public="true" />
+
+        <service id="dhi_blog_managers.article_manager" class="Dhi\BlogBundle\Services\Managers\ArticleManagerService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\Managers\ArticleManagerService" alias="dhi_blog_managers.article_manager" public="true" />
+
+        <service id="dhi_blog_managers.article_comment_manager" class="Dhi\BlogBundle\Services\Managers\ArticleCommentManagerService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\Managers\ArticleCommentManagerService" alias="dhi_blog_managers.article_comment_manager" public="true" />
+
+        <service id="dhi_blog_managers.author_comment_manager" class="Dhi\BlogBundle\Services\Managers\AuthorManagerService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\Managers\AuthorManagerService" alias="dhi_blog_managers.author_comment_manager" public="true" />
+
+        <!--End Managers-->
+
+        <!--Repositories services-->
+
+        <service id="Dhi\BlogBundle\Repository\ArticleRepository" autowire="true" public="true">
+            <tag name="doctrine.repository_service"/>
+        </service>
+
+        <service id="Dhi\BlogBundle\Repository\CategoryRepository" autowire="true" public="true">
+            <tag name="doctrine.repository_service"/>
+        </service>
+
+        <service id="Dhi\BlogBundle\Repository\ArticleCommentRepository" autowire="true" public="true">
+            <tag name="doctrine.repository_service"/>
+        </service>
+
+        <service id="Dhi\BlogBundle\Repository\AuthorRepository" autowire="true" public="true">
+            <tag name="doctrine.repository_service"/>
+        </service>
+
+        <service id="Dhi\BlogBundle\Repository\ArticleCategoryRepository" autowire="true" public="true">
+            <tag name="doctrine.repository_service"/>
+        </service>
+
+        <!--End repositories  services-->
+
+        <!--Twig extension-->
+
+        <service id="Dhi\BlogBundle\Twig\AppTwigExtension" autowire="true" public="true">
+            <tag name="twig.extension"/>
+        </service>
+
+        <!--End twig extension-->
+
+
+        <!--Core services for rest controller-->
+
+        <service id="dhi_blog_service.env_service" class="Dhi\BlogBundle\Services\EnvService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\EnvService" alias="dhi_blog_service.env_service" public="true" />
+
+        <service id="dhi_blog_service.request_service_provider" class="Dhi\BlogBundle\Services\RequestServiceProvider" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\RequestServiceProvider" alias="dhi_blog_service.request_service_provider" public="true" />
+
+        <service id="dhi_blog_service.translator_provider_service" class="Dhi\BlogBundle\Services\TranslatorProviderService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\TranslatorProviderService" alias="dhi_blog_service.translator_provider_service" public="true" />
+
+        <service id="dhi_blog_service.paginator_service" class="Dhi\BlogBundle\Services\PaginatorService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\PaginatorService" alias="dhi_blog_service.paginator_service" public="true" />
+
+        <service id="dhi_blog_service.manager_service" class="Dhi\BlogBundle\Services\ManagerService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\ManagerService" alias="dhi_blog_service.manager_service" public="true" />
+
+        <service id="dhi_blog_service.repository_service" class="Dhi\BlogBundle\Services\RepositoryService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\RepositoryService" alias="dhi_blog_service.repository_service" public="true" />
+
+        <service id="dhi_blog_service.validator_service" class="Dhi\BlogBundle\Services\ValidatorService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\ValidatorService" alias="dhi_blog_service.validator_service" public="true" />
+
+        <service id="dhi_blog_service.kernel_service" class="Dhi\BlogBundle\Services\KernelService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\KernelService" alias="dhi_blog_service.kernel_service" public="true" />
+
+        <service id="dhi_blog_service.directory_service" class="Dhi\BlogBundle\Services\DirectoryService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\DirectoryService" alias="dhi_blog_service.directory_service" public="true" />
+
+        <service id="dhi_blog_service.upload_service" class="Dhi\BlogBundle\Services\FileUploadService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\FileUploadService" alias="dhi_blog_service.upload_service" public="true" />
+
+        <service id="dhi_blog_service.configuration_service" class="Dhi\BlogBundle\Services\ConfigService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\ConfigService" alias="dhi_blog_service.configuration_service" public="true" />
+
+        <service id="dhi_blog_service.authenticator_service" class="Dhi\BlogBundle\Services\AuthorAuthenticatorService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\AuthorAuthenticatorService" alias="dhi_blog_service.authenticator_service" public="true" />
+
+        <service id="dhi_blog_service.mailing_service" class="Dhi\BlogBundle\Services\MailingService" autowire="true" public="true" />
+        <service id="Dhi\BlogBundle\Services\MailingService" alias="dhi_blog_service.mailing_service" public="true" />
+
+        <service id="dhi_blog_service.request_listener"
+                 class="Dhi\BlogBundle\Subscribers\RequestSubscriber">
+            <tag name="kernel.event_listener" event="kernel.request" />
+            <argument type="service" id="dhi_blog_service.kernel_service"/>
+        </service>
+
+        <service id="dhi_blog_service.exception_listener"
+                 class="Dhi\BlogBundle\Subscribers\ExceptionSubscriber">
+            <tag name="kernel.event_listener" event="kernel.exception" />
+        </service>
+
+        <service id="dhi_blog_service.controller_listener"
+                 class="Dhi\BlogBundle\Subscribers\AuthorAuthenticatorSubscriber">
+            <tag name="kernel.event_listener" event="kernel.controller" />
+            <argument type="service" id="dhi_blog_service.kernel_service"/>
+            <argument type="service" id="session"/>
+            <argument type="service" id="Doctrine\Common\Annotations\Reader"/>
+            <argument type="service" id="dhi_blog_service.authenticator_service"/>
+        </service>
+
+    </services>
+</container>

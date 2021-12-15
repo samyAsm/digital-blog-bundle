@@ -1,0 +1,59 @@
+
+<script type="application/javascript">
+
+    $(document).ready(function () {
+        setupAjaxLinkEngine();
+    });
+
+    function setupAjaxLinkEngine() {
+
+        $('.ajax_link').each(function () {
+
+            let link = $(this);
+
+            let response_box = $(link.attr('data-response-box'));
+
+            if (!response_box.html()) response_box = $('#form-modal-zone');
+
+            function initCustomComponents() {
+                let f = response_box.find('form.ajax_form');
+                if (f.length !== 0) f.ajaxForm();
+                let s = response_box.find('select.custom-selector-input');
+                if (s.length !== 0) s.customSelect();
+                let tc = response_box.find('.tab-chooser');
+                if (tc.length !== 0) tc.tabChooser()
+            }
+
+            $(this).on('click', function (e) {
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                $('#form-modal-zone')
+                    .html($('<div class="loader-modal"><div class="loader"></div></div>'));
+
+                $(this).animate({
+                    opacity: 1
+                }, 200, function () {
+                    //send ajax request to the server
+
+                    $.ajax({
+                        type: "GET",
+                        url: link.attr('href'),
+                        contentType: false,
+                        processData: false,
+                        success: function (data) {
+                            response_box.html($(data));
+                            initCustomComponents();
+                        },
+                        error: function (xhr) {
+                            response_box.html($(xhr.responseText))
+                            $('#form-modal-zone').html("")
+                        },
+                    });
+                });
+            })
+        })
+    }
+
+</script>

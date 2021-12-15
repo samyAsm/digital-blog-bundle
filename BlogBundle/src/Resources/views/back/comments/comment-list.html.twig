@@ -1,0 +1,74 @@
+{% extends '@DigitalBlog/parts/back_layout.html.twig' %}
+
+{% block previous_url %}{{ url('admin_home') }}{% endblock previous_url %}
+
+{% block current_page %}Blog - Commentaires{% endblock current_page %}
+
+{% block blog_comments_active %}active{% endblock %}
+{% block blog_active %}active{% endblock %}
+{% block top_action_display %}none{% endblock top_action_display %}
+
+{% block page_title %}Blog - Commentaires - Admin | UKUZI{% endblock %}
+
+{% block content %}
+
+    <div class="row mt--6">
+        <div class="col">
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header border-0">
+                    <h3 class="mb-0">Liste des commentaires</h3>
+                </div>
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush datatable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th style="max-width: 15px;">N°</th>
+                            <th scope="col" class="sort">Auteurs</th>
+                            <th scope="col" class="sort">Email</th>
+                            <th scope="col" class="sort">Commentaire</th>
+                            <th scope="col" class="sort">Date</th>
+                            <th scope="col" class="text-right">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody class="list">
+                        {% for k,article_comment in article_comments %}
+                            <tr>
+                                <td style="max-width: 15px;">{{ k+1 }}</td>
+                                <th class="text-left col-4">
+                                    {{ article_comment.authorName }}
+                                </th>
+                                <th class="col-2">
+                                    {{ article_comment.authorEmail }}
+                                </th>
+                                <th class="position-relative" style="max-width: 200px" title="{{ article_comment.comment }}">
+                                    <p style="font-size: .8rem; overflow: hidden;">
+                                        {{ article_comment.comment }}
+                                    </p>
+                                </th>
+                                <td class="col">
+                                    {{ article_comment.createdAt|date('Y-m-d H:i') }}
+                                </td>
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                                           data-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item ajax_link" href="{{ url('digital_blog__article_comment_delete_form', {article_comment_id: article_comment.uniqKey}) }}">Supprimer</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

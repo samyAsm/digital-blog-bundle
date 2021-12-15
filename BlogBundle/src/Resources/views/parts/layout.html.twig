@@ -1,0 +1,27 @@
+{% extends '@DigitalBlog/parts/base.html.twig' %}
+
+{% block main_layout %}
+
+    <!-- ======= Top Bar ======= -->
+
+    {% include '@DigitalBlog/parts/navbar-top.html.twig' %}
+
+    <!-- ======= Header ======= -->
+
+    {% include '@DigitalBlog/parts/navbar.html.twig' %}
+
+    <!-- End Header -->
+
+    {% block before_content %}
+
+    {% endblock before_content %}
+
+    <div id="main" class="bg-white">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+    {% include '@DigitalBlog/parts/footer-layout.html.twig' %}
+
+{% endblock %}

@@ -1,0 +1,92 @@
+
+<script type="application/javascript">
+
+    $(document).ready(function () {
+        initInputTags();
+    });
+
+    function initInputTags() {
+
+        $('.tag-manager').each(function () {
+            let it = $(this);
+            let input = it.find('input:eq(0)');
+            let tags = it.find('.tags');
+            let referId = "#" + input.attr('refer');
+            let reference = $(referId);
+
+            const isDel = function (e) {
+                return e.keyCode === 8;
+            };
+
+            const isSpace = function (e) {
+                return e.keyCode === 32;
+            };
+
+            const isDelimiter = function (e) {
+                return e.keyCode === 188 || e.keyCode === 59 || e.keyCode === 13;
+            };
+
+            const updateInputReferer = function () {
+                let all_tags = tags.find('.tag');
+                let values = [];
+                all_tags.each(function () {
+                    values.push($(this).attr('val'))
+                });
+
+                reference.val(JSON.stringify(values));
+            };
+
+            const addTag = function (e) {
+                if (e.target.value.trim().length) {
+                    let tag = $('<span class="tag" val="' + e.target.value + '">' + e.target.value + '</span>');
+                    tag.append($('<i class="fas fa-close"></i>'));
+                    tags.append(tag);
+                    initCloser(tag);
+
+                    updateInputReferer();
+                }
+            };
+
+            const initCloser = function (t) {
+                t.find('i').on('click', function (e) {
+                    t.remove();
+                    updateInputReferer();
+                })
+            };
+
+            const removeTag = function () {
+                let all_tags = tags.find('.tag');
+                if (all_tags.length > 0) {
+                    all_tags[all_tags.length - 1].remove();
+                    updateInputReferer();
+                }
+            };
+
+            input.on('keydown', function (e) {
+
+                if (isDel(e) && e.target.value.length <= 0) {
+                    e.preventDefault();
+                    removeTag()
+                }
+
+                if (isSpace(e) || isDelimiter(e)) {
+                    e.preventDefault();
+                    addTag(e);
+                    input.val("")
+                }
+            });
+
+            it.on('initialize', function () {
+                updateInputReferer();
+                tags.find('.tag').each(function () {
+                    initCloser($(this))
+                })
+            });
+
+            it.trigger('initialize')
+        })
+    }
+
+
+
+</script>

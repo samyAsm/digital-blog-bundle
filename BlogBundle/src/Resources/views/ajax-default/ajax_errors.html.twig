@@ -1,0 +1,9 @@
+<div class="ajax-response w-100">
+    {% if messages is defined %}
+        {% for message in messages %}
+            <div class="py-1 px-2 alert alert-danger w-100 text-center small m-0 mb-2">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>

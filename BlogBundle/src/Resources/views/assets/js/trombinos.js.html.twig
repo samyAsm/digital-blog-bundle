@@ -1,0 +1,65 @@
+
+<script type="application/javascript">
+
+    $(document).ready(function () {
+        initTrombinoImage();
+    });
+
+    function initTrombinoImage() {
+
+        $('body').on('click', '.trombino-label', function (e) {
+            let trombino = $(this);
+
+            if (!trombino.hasClass('initialized')) {
+                trombino.addClass('initialized');
+                trombino.trombinoscope();
+                console.log('trombinoscope')
+            }
+        })
+    }
+
+    $.fn.trombinoscope = function () {
+
+        var fileTypes = ['jpg', 'jpeg', 'png'];  //acceptable file types
+
+        if (!$(this).hasClass('file-image')) {
+            return;
+        }
+
+        let trombino = $(this);
+        let preview = $(this).find('.previewer');
+
+        trombino.find('input[type=file]').each(function () {
+            let input = $(this);
+            input.on('change', function (evt) {
+
+                trombino.addClass('loading');
+                var tgt = evt.target || window.event.srcElement,
+                    files = tgt.files;
+
+                // FileReader support
+                if (FileReader && files && files.length) {
+                    var fr = new FileReader();
+                    var extension = files[0].name.split('.').pop().toLowerCase();
+                    fr.onload = function (e) {
+                        let success = fileTypes.indexOf(extension) > -1;
+                        if (success) {
+                            preview.html('<img src="' + fr.result + '" class="preview"/>');
+                        } else {
+                            console.log("Invalid file extension : " + extension)
+                        }
+                    };
+                    fr.onloadend = function (e) {
+                        trombino.animate({
+                            opacity: 1
+                        }, 500, function () {
+                            trombino.removeClass('loading')
+                        })
+                    };
+                    fr.readAsDataURL(files[0]);
+                }
+            })
+        })
+    };
+
+</script>
