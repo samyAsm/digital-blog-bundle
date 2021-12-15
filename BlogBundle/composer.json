@@ -44,16 +44,5 @@
     "psr-4": {
       "Dhi\\BlogBundle\\": "src/"
     }
-  },
-  "scripts": {
-    "command": [
-      "MyCoolPay\\Setup\\Setup::command"
-    ],
-    "post-install-cmd": [
-      "MyCoolPay\\Setup\\Setup::postCmdInstall"
-    ],
-    "post-update-cmd": [
-      "MyCoolPay\\Setup\\Setup::postCmdUpdate"
-    ]
   }
 }
