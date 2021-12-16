@@ -4,10 +4,10 @@
  * Time: 07:30
  */
 
-namespace DhiBlogBundle\Services;
+namespace Dhi\BlogBundle\Services;
 
-use DhiBlogBundle\Core\Exceptions\Alert;
-use DhiBlogBundle\Utils\RandomStringGenerator;
+use Dhi\BlogBundle\Core\Exceptions\Alert;
+use Dhi\BlogBundle\Utils\RandomStringGenerator;
 use Hshn\Base64EncodedFile\HttpFoundation\File\Base64EncodedFile;
 use Hshn\Base64EncodedFile\HttpFoundation\File\UploadedBase64EncodedFile;
 use Intervention\Image\ImageManager;
@@ -52,7 +52,7 @@ class FileUploadService
      * @param string|null $name
      * @return string|null
      * @throws Alert
-     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
+     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
     public function storeUploadedFile(UploadedFile $uploadedFile, ?string $dir = null, ?string $name = null)
     {
@@ -88,7 +88,7 @@ class FileUploadService
      * @param string|null $dir
      * @return string|null
      * @throws Alert
-     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
+     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
     public function store_image(UploadedFile $uploadedFile, ?string $dir = null)
     {
@@ -106,7 +106,7 @@ class FileUploadService
      * @param string|null $dir
      * @return string|null
      * @throws Alert
-     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
+     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
     public function store_doc(UploadedFile $uploadedFile, ?string $dir = null)
     {

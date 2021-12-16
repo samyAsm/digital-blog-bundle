@@ -4,10 +4,10 @@
  * Time: 15:41
  */
 
-namespace DhiBlogBundle\Responses\ArticleComment;
+namespace Dhi\BlogBundle\Responses\ArticleComment;
 
 
-use DhiBlogBundle\Core\Response\AbstractResponse;
+use Dhi\BlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class ArticleCommentDeleted extends AbstractResponse

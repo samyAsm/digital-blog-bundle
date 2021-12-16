@@ -4,7 +4,7 @@
  * Time: 15:04
  */
 
-namespace DhiBlogBundle\Core\Test;
+namespace Dhi\BlogBundle\Core\Test;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

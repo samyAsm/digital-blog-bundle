@@ -1,6 +1,6 @@
 <?php
 
-namespace DhiBlogBundle\Services;
+namespace Dhi\BlogBundle\Services;
 
 class BlogService
 {

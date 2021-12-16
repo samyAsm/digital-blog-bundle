@@ -4,7 +4,7 @@
  * Time: 11:02
  */
 
-namespace DhiBlogBundle\Core\Entity;
+namespace Dhi\BlogBundle\Core\Entity;
 
 
 use Symfony\Component\Security\Core\User\UserInterface;

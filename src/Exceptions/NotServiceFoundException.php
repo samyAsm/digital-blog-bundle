@@ -1,7 +1,7 @@
 <?php
 
 
-namespace DhiBlogBundle\Exceptions;
+namespace Dhi\BlogBundle\Exceptions;
 
 class NotServiceFoundException extends \Exception
 {

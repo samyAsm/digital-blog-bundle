@@ -84,6 +84,11 @@ security:
             cost: 12
 ```
 
-Make sure to have ```DhiBlogBundle\DigitalBlogBundle::class => ['all' => true],``` into ```config/bundles.php``` and add this content
+Make sure to have ```Dhi\BlogBundle\DigitalBlogBundle::class => ['all' => true],``` into ```config/bundles.php``` and add this content
 
 
+### Update schema
+
+```
+php bin/console doctrine:schema:update --force
+```

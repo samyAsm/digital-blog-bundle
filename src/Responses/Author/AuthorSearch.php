@@ -4,10 +4,10 @@
  * Time: 15:41
  */
 
-namespace DhiBlogBundle\Responses\Author;
+namespace Dhi\BlogBundle\Responses\Author;
 
 
-use DhiBlogBundle\Core\Response\AbstractResponse;
+use Dhi\BlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class AuthorSearch extends AbstractResponse

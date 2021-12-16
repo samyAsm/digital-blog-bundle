@@ -4,8 +4,12 @@
  * Time: 13:21
  */
 
-namespace DhiBlogBundle\Core\Command;
+namespace Dhi\BlogBundle\Core\Command;
 
+use Dhi\BlogBundle\Services\EnvService;
+use Dhi\BlogBundle\Services\KernelService;
+use Dhi\BlogBundle\Services\ManagerService;
+use Dhi\BlogBundle\Services\RepositoryService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -38,8 +42,8 @@ abstract class CoreCommand extends Command
         parent::__construct($name);
         $this->kernel = $kernelService->getKernel();
         $this->container = $this->kernel->getContainer();
-        $this->manager = $this->container->get('app.manager_service');
-        $this->repositoryService = $this->container->get('app.repository_service');
+        $this->manager = $this->container->get('dhi_blog_service.manager_service');
+        $this->repositoryService = $this->container->get('dhi_blog_service.repository_service');
         $this->env = $env;
     }
 }

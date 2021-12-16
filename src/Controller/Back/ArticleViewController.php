@@ -4,16 +4,16 @@
  * Time: 16:56
  */
 
-namespace DhiBlogBundle\Controller\Back;
+namespace Dhi\BlogBundle\Controller\Back;
 
 
-use DhiBlogBundle\Annotations\MustAuthenticate;
-use DhiBlogBundle\Core\Controller\CoreController;
-use DhiBlogBundle\Entity\Article;
-use DhiBlogBundle\Responses\Article\ArticleDeletionFail;
-use DhiBlogBundle\Responses\Article\ArticleForm;
-use DhiBlogBundle\Responses\Article\DeleteArticle;
-use DhiBlogBundle\Services\Managers\ArticleManagerService;
+use Dhi\BlogBundle\Annotations\MustAuthenticate;
+use Dhi\BlogBundle\Core\Controller\CoreController;
+use Dhi\BlogBundle\Entity\Article;
+use Dhi\BlogBundle\Responses\Article\ArticleDeletionFail;
+use Dhi\BlogBundle\Responses\Article\ArticleForm;
+use Dhi\BlogBundle\Responses\Article\DeleteArticle;
+use Dhi\BlogBundle\Services\Managers\ArticleManagerService;
 use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

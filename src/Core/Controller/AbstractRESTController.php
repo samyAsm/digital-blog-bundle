@@ -6,13 +6,13 @@
  * Time: 19:30
  */
 
-namespace DhiBlogBundle\Core\Controller;
+namespace Dhi\BlogBundle\Core\Controller;
 
-use DhiBlogBundle\Core\Data\APIResponse;
-use DhiBlogBundle\Core\Entity\CoreEntity;
-use DhiBlogBundle\Services\KernelService;
-use DhiBlogBundle\Services\ManagerService;
-use DhiBlogBundle\Services\RepositoryService;
+use Dhi\BlogBundle\Core\Data\APIResponse;
+use Dhi\BlogBundle\Core\Entity\CoreEntity;
+use Dhi\BlogBundle\Services\KernelService;
+use Dhi\BlogBundle\Services\ManagerService;
+use Dhi\BlogBundle\Services\RepositoryService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;

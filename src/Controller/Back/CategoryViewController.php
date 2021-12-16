@@ -4,14 +4,14 @@
  * Time: 16:56
  */
 
-namespace DhiBlogBundle\Controller\Back;
+namespace Dhi\BlogBundle\Controller\Back;
 
 
-use DhiBlogBundle\Annotations\MustAuthenticate;
-use DhiBlogBundle\Core\Controller\CoreController;
-use DhiBlogBundle\Responses\Category\CategoryForm;
-use DhiBlogBundle\Responses\Category\DeleteCategory;
-use DhiBlogBundle\Services\Managers\CategoryManagerService;
+use Dhi\BlogBundle\Annotations\MustAuthenticate;
+use Dhi\BlogBundle\Core\Controller\CoreController;
+use Dhi\BlogBundle\Responses\Category\CategoryForm;
+use Dhi\BlogBundle\Responses\Category\DeleteCategory;
+use Dhi\BlogBundle\Services\Managers\CategoryManagerService;
 use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

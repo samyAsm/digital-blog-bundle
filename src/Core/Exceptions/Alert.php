@@ -4,7 +4,7 @@
  * Time: 16:35
  */
 
-namespace DhiBlogBundle\Core\Exceptions;
+namespace Dhi\BlogBundle\Core\Exceptions;
 
 
 use Exception;

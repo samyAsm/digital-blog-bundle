@@ -1,12 +1,12 @@
 <?php
 
-namespace DhiBlogBundle\Subscribers;
+namespace Dhi\BlogBundle\Subscribers;
 
-use DhiBlogBundle\Core\Data\APIResponse;
-use DhiBlogBundle\Core\Subscriber\CoreSubscriber;
-use DhiBlogBundle\Exceptions\NotAuthenticatedException;
-use DhiBlogBundle\Responses\Auth\RedirectToNotAuthenticatedResponse;
-use DhiBlogBundle\Responses\Auth\RedirectToNotAuthorizedResponse;
+use Dhi\BlogBundle\Core\Data\APIResponse;
+use Dhi\BlogBundle\Core\Subscriber\CoreSubscriber;
+use Dhi\BlogBundle\Exceptions\NotAuthenticatedException;
+use Dhi\BlogBundle\Responses\Auth\RedirectToNotAuthenticatedResponse;
+use Dhi\BlogBundle\Responses\Auth\RedirectToNotAuthorizedResponse;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;

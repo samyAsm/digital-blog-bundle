@@ -4,7 +4,7 @@
  * Time: 08:51
  */
 
-namespace DhiBlogBundle\Utils;
+namespace Dhi\BlogBundle\Utils;
 
 
 trait MathsUtils

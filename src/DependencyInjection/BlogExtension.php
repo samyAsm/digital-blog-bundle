@@ -4,7 +4,7 @@
  * Time: 07:01
  */
 
-namespace DhiBlogBundle\DependencyInjection;
+namespace Dhi\BlogBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

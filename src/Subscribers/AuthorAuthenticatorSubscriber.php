@@ -1,14 +1,14 @@
 <?php
 
 
-namespace DhiBlogBundle\Subscribers;
+namespace Dhi\BlogBundle\Subscribers;
 
 
-use DhiBlogBundle\Annotations\MustAuthenticate;
-use DhiBlogBundle\Core\Controller\AbstractRESTController;
-use DhiBlogBundle\Exceptions\NotAuthenticatedException;
-use DhiBlogBundle\Services\AuthorAuthenticatorService;
-use DhiBlogBundle\Services\KernelService;
+use Dhi\BlogBundle\Annotations\MustAuthenticate;
+use Dhi\BlogBundle\Core\Controller\AbstractRESTController;
+use Dhi\BlogBundle\Exceptions\NotAuthenticatedException;
+use Dhi\BlogBundle\Services\AuthorAuthenticatorService;
+use Dhi\BlogBundle\Services\KernelService;
 use Doctrine\Common\Annotations\Reader;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -53,7 +53,7 @@ class AuthorAuthenticatorSubscriber
      * @throws \App\Exceptions\InvalidArgumentException
      * @throws \Doctrine\ORM\NonUniqueResultException
      * @throws \ReflectionException
-     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
+     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
     public function onKernelController(ControllerEvent $event)
     {
@@ -79,7 +79,7 @@ class AuthorAuthenticatorSubscriber
      * @param \ReflectionMethod $method
      * @throws \App\Exceptions\InvalidArgumentException
      * @throws \Doctrine\ORM\NonUniqueResultException
-     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
+     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
     private function guardMethod(\ReflectionMethod $method): void
     {
@@ -93,7 +93,7 @@ class AuthorAuthenticatorSubscriber
      * @param \ReflectionMethod $method
      * @throws \App\Exceptions\InvalidArgumentException
      * @throws \Doctrine\ORM\NonUniqueResultException
-     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
+     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
     private function guardClass(\ReflectionObject $object, \ReflectionMethod $method): void
     {
@@ -105,7 +105,7 @@ class AuthorAuthenticatorSubscriber
     /**
      * @param $annotation
      * @param \ReflectionMethod $method
-     * @throws \DhiBlogBundle\Exceptions\InvalidArgumentException
+     * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
     private function processGuarder($annotation, \ReflectionMethod $method): void
     {

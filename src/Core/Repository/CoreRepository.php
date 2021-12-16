@@ -4,11 +4,11 @@
  * Time: 09:29
  */
 
-namespace DhiBlogBundle\Core\Repository;
+namespace Dhi\BlogBundle\Core\Repository;
 
 
-use DhiBlogBundle\Core\Entity\CoreEntity;
-use DhiBlogBundle\Core\Exceptions\Alert;
+use Dhi\BlogBundle\Core\Entity\CoreEntity;
+use Dhi\BlogBundle\Core\Exceptions\Alert;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Persistence\ManagerRegistry;

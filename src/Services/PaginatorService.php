@@ -4,7 +4,7 @@
  * Time: 23:19
  */
 
-namespace DhiBlogBundle\Services;
+namespace Dhi\BlogBundle\Services;
 
 
 use Knp\Component\Pager\PaginatorInterface;

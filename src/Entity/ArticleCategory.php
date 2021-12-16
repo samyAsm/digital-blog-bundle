@@ -1,9 +1,9 @@
 <?php
 
-namespace DhiBlogBundle\Entity;
+namespace Dhi\BlogBundle\Entity;
 
-use DhiBlogBundle\Core\Entity\CoreEntity;
-use DhiBlogBundle\Repository\ArticleCategoryRepository;
+use Dhi\BlogBundle\Core\Entity\CoreEntity;
+use Dhi\BlogBundle\Repository\ArticleCategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**

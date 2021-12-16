@@ -4,7 +4,7 @@
  * Time: 10:16
  */
 
-namespace DhiBlogBundle\Core\Data;
+namespace Dhi\BlogBundle\Core\Data;
 
 
 trait ValuesRetrieverTrait

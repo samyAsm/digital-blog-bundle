@@ -4,13 +4,13 @@
  * Time: 11:01
  */
 
-namespace DhiBlogBundle\Services\Managers;
+namespace Dhi\BlogBundle\Services\Managers;
 
 
-use DhiBlogBundle\Core\Exceptions\Alert;
-use DhiBlogBundle\Entity\Article;
-use DhiBlogBundle\Entity\ArticleComment;
-use DhiBlogBundle\Services\RepositoryService;
+use Dhi\BlogBundle\Core\Exceptions\Alert;
+use Dhi\BlogBundle\Entity\Article;
+use Dhi\BlogBundle\Entity\ArticleComment;
+use Dhi\BlogBundle\Services\RepositoryService;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\Translation\TranslatorInterface;
 

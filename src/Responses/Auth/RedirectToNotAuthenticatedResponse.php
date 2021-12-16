@@ -6,10 +6,10 @@
  * Time: 16:09
  */
 
-namespace DhiBlogBundle\Responses\Auth;
+namespace Dhi\BlogBundle\Responses\Auth;
 
 
-use DhiBlogBundle\Core\Response\AbstractResponse;
+use Dhi\BlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class RedirectToNotAuthenticatedResponse extends AbstractResponse

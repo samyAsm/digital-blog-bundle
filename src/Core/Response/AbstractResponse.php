@@ -4,11 +4,11 @@
  * Time: 09:56
  */
 
-namespace DhiBlogBundle\Core\Response;
+namespace Dhi\BlogBundle\Core\Response;
 
 
-use DhiBlogBundle\Core\Data\APIResponse;
-use DhiBlogBundle\Utils\KernelUtils;
+use Dhi\BlogBundle\Core\Data\APIResponse;
+use Dhi\BlogBundle\Utils\KernelUtils;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
@@ -40,7 +40,7 @@ abstract class AbstractResponse extends Response
         /**
          * @var Request $r
         */
-        $r = $c->get('app.request_service_provider')->getRequest();
+        $r = $c->get('dhi_blog_service.request_service_provider')->getRequest();
 
         $headers = $response->headers->all();
 

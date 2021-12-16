@@ -4,10 +4,10 @@
  * Time: 15:41
  */
 
-namespace DhiBlogBundle\Responses\Article;
+namespace Dhi\BlogBundle\Responses\Article;
 
 
-use DhiBlogBundle\Core\Response\AbstractResponse;
+use Dhi\BlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class ArticleDeleted extends AbstractResponse

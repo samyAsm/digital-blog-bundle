@@ -4,10 +4,10 @@
  * Time: 08:22
  */
 
-namespace DhiBlogBundle\Controller\Test;
+namespace Dhi\BlogBundle\Controller\Test;
 
 
-use DhiBlogBundle\Services\BlogService;
+use Dhi\BlogBundle\Services\BlogService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

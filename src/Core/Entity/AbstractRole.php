@@ -4,10 +4,10 @@
  * Time: 11:02
  */
 
-namespace DhiBlogBundle\Core\Entity;
+namespace Dhi\BlogBundle\Core\Entity;
 
 
-use DhiBlogBundle\Annotations\PropertyDescription;
+use Dhi\BlogBundle\Annotations\PropertyDescription;
 use Doctrine\ORM\Mapping as ORM;
 
 abstract class AbstractRole extends CoreEntity

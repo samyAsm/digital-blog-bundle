@@ -1,8 +1,8 @@
 <?php
 
-namespace DhiBlogBundle\Responses\Article;
+namespace Dhi\BlogBundle\Responses\Article;
 
-use DhiBlogBundle\Core\Response\AbstractResponse;
+use Dhi\BlogBundle\Core\Response\AbstractResponse;
 use Twig\Error\LoaderError;
 
 class ArticleDeletionFail extends AbstractResponse

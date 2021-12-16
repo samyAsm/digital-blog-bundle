@@ -1,10 +1,10 @@
 <?php
 
-namespace DhiBlogBundle\Repository;
+namespace Dhi\BlogBundle\Repository;
 
-use DhiBlogBundle\Core\Repository\CoreRepository;
-use DhiBlogBundle\Entity\Article;
-use DhiBlogBundle\Entity\Category;
+use Dhi\BlogBundle\Core\Repository\CoreRepository;
+use Dhi\BlogBundle\Entity\Article;
+use Dhi\BlogBundle\Entity\Category;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**

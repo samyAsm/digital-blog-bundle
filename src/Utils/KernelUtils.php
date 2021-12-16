@@ -4,7 +4,7 @@
  * Time: 10:17
  */
 
-namespace DhiBlogBundle\Utils;
+namespace Dhi\BlogBundle\Utils;
 
 
 class KernelUtils

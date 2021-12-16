@@ -4,9 +4,9 @@
  * Time: 09:56
  */
 
-namespace DhiBlogBundle\Core\Response;
+namespace Dhi\BlogBundle\Core\Response;
 
-use DhiBlogBundle\Core\Data\APIResponse;
+use Dhi\BlogBundle\Core\Data\APIResponse;
 
 abstract class AbstractBadRequestResponse extends AbstractResponse
 {

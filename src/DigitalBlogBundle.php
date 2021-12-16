@@ -1,9 +1,9 @@
 <?php
 
-namespace DhiBlogBundle;
+namespace Dhi\BlogBundle;
 
 
-use DhiBlogBundle\DependencyInjection\BlogExtension;
+use Dhi\BlogBundle\DependencyInjection\BlogExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

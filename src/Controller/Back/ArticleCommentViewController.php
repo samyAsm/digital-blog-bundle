@@ -4,13 +4,13 @@
  * Time: 16:56
  */
 
-namespace DhiBlogBundle\Controller\Back;
+namespace Dhi\BlogBundle\Controller\Back;
 
-use DhiBlogBundle\Annotations\MustAuthenticate;
-use DhiBlogBundle\Core\Controller\CoreController;
-use DhiBlogBundle\Responses\ArticleComment\ArticleCommentForm;
-use DhiBlogBundle\Responses\ArticleComment\DeleteArticleComment;
-use DhiBlogBundle\Services\Managers\ArticleCommentManagerService;
+use Dhi\BlogBundle\Annotations\MustAuthenticate;
+use Dhi\BlogBundle\Core\Controller\CoreController;
+use Dhi\BlogBundle\Responses\ArticleComment\ArticleCommentForm;
+use Dhi\BlogBundle\Responses\ArticleComment\DeleteArticleComment;
+use Dhi\BlogBundle\Services\Managers\ArticleCommentManagerService;
 use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

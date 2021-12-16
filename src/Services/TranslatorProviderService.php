@@ -4,7 +4,7 @@
  * Time: 07:30
  */
 
-namespace DhiBlogBundle\Services;
+namespace Dhi\BlogBundle\Services;
 
 
 use Symfony\Contracts\Translation\TranslatorInterface;

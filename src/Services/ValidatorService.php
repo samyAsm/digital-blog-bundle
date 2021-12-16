@@ -4,11 +4,11 @@
  * Time: 18:26
  */
 
-namespace DhiBlogBundle\Services;
+namespace Dhi\BlogBundle\Services;
 
-use DhiBlogBundle\Core\Entity\CoreEntity;
-use DhiBlogBundle\Core\Exceptions\Alert;
-use DhiBlogBundle\Validator\EntityValidator;
+use Dhi\BlogBundle\Core\Entity\CoreEntity;
+use Dhi\BlogBundle\Core\Exceptions\Alert;
+use Dhi\BlogBundle\Validator\EntityValidator;
 use Symfony\Component\Validator\ConstraintViolation;
 use Symfony\Component\Validator\Validation;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -50,7 +50,7 @@ class ValidatorService
         $factory = new EntityValidator();
 
         $factory->addValidator('doctrine.orm.validator.unique',
-            $this->serviceProvider->get('app.unique_entity_validator'));
+            $this->serviceProvider->get('dhi_blog_service.unique_entity_validator'));
 
         $builder = Validation::createValidatorBuilder();
         $builder->setConstraintValidatorFactory($factory);

@@ -4,10 +4,10 @@
  * Time: 07:30
  */
 
-namespace DhiBlogBundle\Services;
+namespace Dhi\BlogBundle\Services;
 
 
-use DhiBlogBundle\Exceptions\InvalidArgumentException;
+use Dhi\BlogBundle\Exceptions\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class EnvService extends AbstractController

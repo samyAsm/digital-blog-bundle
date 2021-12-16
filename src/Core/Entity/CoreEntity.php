@@ -4,11 +4,11 @@
  * Time: 09:29
  */
 
-namespace DhiBlogBundle\Core\Entity;
+namespace Dhi\BlogBundle\Core\Entity;
 
-use DhiBlogBundle\Annotations\MethodDescription;
-use DhiBlogBundle\Annotations\PropertyDescription;
-use DhiBlogBundle\Core\Data\SerializableInterface;
+use Dhi\BlogBundle\Annotations\MethodDescription;
+use Dhi\BlogBundle\Annotations\PropertyDescription;
+use Dhi\BlogBundle\Core\Data\SerializableInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 

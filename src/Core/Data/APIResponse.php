@@ -4,7 +4,7 @@
  * Time: 17:38
  */
 
-namespace DhiBlogBundle\Core\Data;
+namespace Dhi\BlogBundle\Core\Data;
 
 
 use Doctrine\Common\Collections\Collection;

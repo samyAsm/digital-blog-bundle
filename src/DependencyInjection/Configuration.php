@@ -4,7 +4,7 @@
  * Time: 08:01
  */
 
-namespace DhiBlogBundle\DependencyInjection;
+namespace Dhi\BlogBundle\DependencyInjection;
 
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

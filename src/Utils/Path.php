@@ -1,7 +1,7 @@
 <?php
 
 
-namespace DhiBlogBundle\Utils;
+namespace Dhi\BlogBundle\Utils;
 
 
 class Path

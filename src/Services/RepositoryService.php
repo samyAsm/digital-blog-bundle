@@ -1,15 +1,15 @@
 <?php
 
-namespace DhiBlogBundle\Services;
+namespace Dhi\BlogBundle\Services;
 
-use DhiBlogBundle\Entity\Article;
-use DhiBlogBundle\Entity\ArticleComment;
-use DhiBlogBundle\Entity\Author;
-use DhiBlogBundle\Entity\Category;
-use DhiBlogBundle\Repository\ArticleCommentRepository;
-use DhiBlogBundle\Repository\ArticleRepository;
-use DhiBlogBundle\Repository\AuthorRepository;
-use DhiBlogBundle\Repository\CategoryRepository;
+use Dhi\BlogBundle\Entity\Article;
+use Dhi\BlogBundle\Entity\ArticleComment;
+use Dhi\BlogBundle\Entity\Author;
+use Dhi\BlogBundle\Entity\Category;
+use Dhi\BlogBundle\Repository\ArticleCommentRepository;
+use Dhi\BlogBundle\Repository\ArticleRepository;
+use Dhi\BlogBundle\Repository\AuthorRepository;
+use Dhi\BlogBundle\Repository\CategoryRepository;
 use Doctrine\Persistence\ObjectRepository;
 
 class RepositoryService extends ManagerService

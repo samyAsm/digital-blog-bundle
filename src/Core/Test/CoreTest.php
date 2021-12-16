@@ -4,7 +4,7 @@
  * Time: 14:55
  */
 
-namespace DhiBlogBundle\Core\Test;
+namespace Dhi\BlogBundle\Core\Test;
 
 use Monolog\Test\TestCase;
 
