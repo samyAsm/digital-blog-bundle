@@ -76,11 +76,13 @@ class AuthorManagerService
         $email = $this->request->get('email');
         $description = $this->request->get('description');
         $can_publish = $this->getBool($this->request->get('can_publish'));
+        $is_admin = $this->getBool($this->request->get('is_admin'));
 
         $author
             ->setAuthorName($author_name)
             ->setDescription($description)
             ->setCanPublish($can_publish)
+            ->setIsAdmin($is_admin)
             ->setLastName($last_name)
             ->setFirstName($first_name)
             ->setEmail($email)

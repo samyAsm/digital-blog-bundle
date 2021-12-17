@@ -31,6 +31,11 @@ class Author extends AbstractUser
     private $can_publish;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $is_admin;
+
+    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $profile_picture;
@@ -105,7 +110,7 @@ class Author extends AbstractUser
         return $this->can_publish;
     }
 
-    public function setCanPublish(string $can_publish): self
+    public function setCanPublish(?bool $can_publish): self
     {
         $this->can_publish = $can_publish;
 
@@ -269,6 +274,25 @@ class Author extends AbstractUser
     public function setResetPasswordToken(?string $reset_password_token)
     {
         $this->reset_password_token = $reset_password_token;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsAdmin()
+    {
+        return $this->is_admin;
+    }
+
+    /**
+     * @param mixed $is_admin
+     * @return Author
+     */
+    public function setIsAdmin(?bool $is_admin): Author
+    {
+        $this->is_admin = $is_admin;
 
         return $this;
     }
