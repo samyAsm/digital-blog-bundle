@@ -71,6 +71,8 @@ class InstallCommand extends CoreCommand
 
             $author->setCanPublish(true);
 
+            $author->setIsAdmin(true);
+
             $author->setPassword($this->container->get('dhi_blog_service.password_service')
                 ->encodePassword($author, $password));
 
