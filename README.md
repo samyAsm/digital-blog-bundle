@@ -86,6 +86,16 @@ security:
 
 Make sure to have ```Dhi\BlogBundle\DigitalBlogBundle::class => ['all' => true],``` into ```config/bundles.php``` and add this content
 
+### Env
+
+```
+DIGITAL_BLOG_EMAIL_SENDER=support@dhi-academy.com
+DIGITAL_BLOG_EMAIL_FROM=Support
+
+DIGITAL_BLOG_ADMIN_EMAIL=bakon@gmail.com
+DIGITAL_BLOG_ADMIN_PASSWORD=password
+DIGITAL_BLOG_ADMIN_NAME=name
+```
 
 ### Update schema
 

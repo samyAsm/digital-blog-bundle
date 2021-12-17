@@ -84,6 +84,8 @@ class CategoryController extends CoreController
     {
         try {
 
+            $this->checkAuthorAdmin();
+
             $category = $categoryManagerService->buildCategoryFromRequest(
                 $categoryManagerService->getCategoryFromRequest(false)
             );
@@ -122,6 +124,8 @@ class CategoryController extends CoreController
     public function delete(CategoryManagerService $categoryManagerService)
     {
         try {
+
+            $this->checkAuthorAdmin();
 
             $category = $categoryManagerService->getCategoryFromRequest();
 

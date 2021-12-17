@@ -90,6 +90,8 @@ class AuthorController extends CoreController
     {
         try {
 
+            $this->checkAuthorAdmin();
+
             $author = $authorManagerService->buildAuthorFromRequest(
                 $authorManagerService->getAuthorFromRequest(false)
             );
@@ -132,6 +134,8 @@ class AuthorController extends CoreController
     public function delete(AuthorManagerService $authorManagerService)
     {
         try {
+
+            $this->checkAuthorAdmin();
 
             $author = $authorManagerService->getAuthorFromRequest();
 

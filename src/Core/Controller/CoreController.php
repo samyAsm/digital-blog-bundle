@@ -1,13 +1,10 @@
 <?php
-/**
- * Date: 15/03/21
- * Time: 09:28
- */
 
 namespace Dhi\BlogBundle\Core\Controller;
 
 use Dhi\BlogBundle\Core\Data\ValuesRetrieverTrait;
 use Dhi\BlogBundle\Core\Entity\CoreEntity;
+use Dhi\BlogBundle\Exceptions\InsufficientAccessException;
 use Dhi\BlogBundle\Services\KernelService;
 use Dhi\BlogBundle\Utils\RegexUtils;
 
@@ -36,5 +33,16 @@ abstract class CoreController extends AbstractRESTController
         foreach ($entities as $ek => $entity) {
             $this->validate($entity);
         }
+    }
+
+    /**
+     * @throws InsufficientAccessException
+     */
+    protected function checkAuthorAdmin()
+    {
+        $author = $this->serviceProvider->get('dhi_blog_service.authenticator_service')->getAuthor();
+
+        if (!$author->getIsAdmin())
+            throw new InsufficientAccessException("Not authorized");
     }
 }

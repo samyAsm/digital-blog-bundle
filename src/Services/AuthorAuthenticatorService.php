@@ -99,6 +99,6 @@ class AuthorAuthenticatorService extends ManagerService
      */
     protected function getTokenParam(): ?string
     {
-        return $this->env->getParam('SESSION_WEB_TOKEN', null);
+        return $this->env->getParam('SESSION_DIGITAL_BLOG_TOKEN', null);
     }
 }
