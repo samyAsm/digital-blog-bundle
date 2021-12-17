@@ -15,18 +15,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Services/PasswordService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-364">
-              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-              <folding>
-                <element signature="e#43#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Author.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -92,14 +80,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Resources/views/parts/back_layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-303">
-              <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+            <state relative-caret-position="192">
+              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
               <folding>
                 <element signature="e#12#50#0#Twig" expanded="true" />
                 <element signature="e#4064#4089#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Resources/views/back/categories/category-deletion-fail.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="63" lean-forward="true" selection-start-column="63" selection-end-column="63" />
+              <folding>
+                <element signature="e#12#59#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,11 +136,13 @@
       <find>app.</find>
       <find>UKUZI</find>
       <find>admin_home</find>
+      <find>responses/ajax-default/ajax_errors.html.twig</find>
     </findStrings>
     <replaceStrings>
       <replace>DhiBlogBundle</replace>
       <replace>Blog</replace>
       <replace>digital_blog_article_list</replace>
+      <replace>@DigitalBlog/ajax-default/ajax_errors.html.twig</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -166,6 +168,7 @@
         <option value="$PROJECT_DIR$/src/Subscribers/RequestSubscriber.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Resources/views/parts/back_layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Resources/views/back/categories/category-deletion-fail.html.twig" />
       </list>
     </option>
   </component>
@@ -415,16 +418,15 @@
       <workItem from="1639645276172" duration="4206000" />
       <workItem from="1639672633547" duration="592000" />
       <workItem from="1639677228414" duration="352000" />
-      <workItem from="1639732366856" duration="9117000" />
+      <workItem from="1639732366856" duration="9402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23930000" />
+    <option name="totallyTimeSpent" value="24215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23867069" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -686,11 +688,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Resources/views/parts/back_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+        <state relative-caret-position="192">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
           <folding>
             <element signature="e#12#50#0#Twig" expanded="true" />
             <element signature="e#4064#4089#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Resources/views/back/categories/category-deletion-fail.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="63" lean-forward="true" selection-start-column="63" selection-end-column="63" />
+          <folding>
+            <element signature="e#12#59#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

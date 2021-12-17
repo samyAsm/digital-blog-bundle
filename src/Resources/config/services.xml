@@ -192,7 +192,7 @@
             <tag name="kernel.event_listener" event="kernel.exception" />
         </service>
 
-        <service id="dhi_blog_service.unique_entity_validator"
+        <service id="dhi_blog_service.unique_entity_validator" public="true"
                  class="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator">
             <argument type="service" id="doctrine"/>
         </service>

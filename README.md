@@ -90,6 +90,8 @@ Make sure to have ```Dhi\BlogBundle\DigitalBlogBundle::class => ['all' => true],
 
 ```
 SESSION_LIFE_TIME=3600
+#in Kb
+MAX_FILE_SIZE=4048
 SESSION_DIGITAL_BLOG_TOKEN=auth_blog_token
 
 DIGITAL_BLOG_EMAIL_SENDER=support@dhi-academy.com
