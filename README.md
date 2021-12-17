@@ -89,6 +89,8 @@ Make sure to have ```Dhi\BlogBundle\DigitalBlogBundle::class => ['all' => true],
 ### Env
 
 ```
+SESSION_DIGITAL_BLOG_TOKEN=auth_blog_token
+
 DIGITAL_BLOG_EMAIL_SENDER=support@dhi-academy.com
 DIGITAL_BLOG_EMAIL_FROM=Support
 

@@ -13,10 +13,17 @@ use Dhi\BlogBundle\Services\KernelService;
 use Exception;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Twig\Environment;
+use Symfony\Component\HttpFoundation\Request;
 
 class RequestSubscriber
 {
     private $container;
+
+
+    /**
+     * @var Request
+     */
+    protected $request;
 
     public function __construct(KernelService $kernelService)
     {
@@ -40,11 +47,44 @@ class RequestSubscriber
 
             $this->define_twig_theme_parameters($twig);
 
+            $this->parseRequest($event->getRequest());
+
         } catch (Exception $exception) {
 
-            dd($exception);
             // DO Nothing
         }
+    }
+
+
+    private function parseRequest(Request $request)
+    {
+        $contents = json_decode(trim($request->getContent()), true);
+
+        if (!is_array($contents))
+            parse_str($request->getContent(), $contents);
+
+        try {
+            if (is_array($contents)) {
+                foreach ($contents as $key => $content) {
+                    if (!$request->request->get($this->sanitizeContent($key))) {
+                        if (is_string($key)) {
+                            $request->request->set($this->sanitizeContent($key), $this->sanitizeContent($content));
+                        }
+                    }
+                }
+            }
+        } catch (Exception $exception) {
+            //
+        }
+    }
+
+    /**
+     * @param string|array $str
+     * @return mixed
+     */
+    private function sanitizeContent($str)
+    {
+        return $str;
     }
 
     /**
