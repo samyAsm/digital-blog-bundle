@@ -28,7 +28,7 @@
                     {% for parent_category in parent_blog_categories() %}
                         {% if parent_category.articleCategories|length != 0 %}
                             <p>
-                                <a href="{{ url('blog_article_by_category', { category_id: parent_category.uniqKey, category_name: parent_category.categoryName }) }}" class="text-reset">
+                                <a href="{{ url('digital_blog_article_by_category', { category_id: parent_category.uniqKey, category_name: parent_category.categoryName }) }}" class="text-reset">
                                     {{ parent_category.categoryName }}
                                 </a>
                             </p>

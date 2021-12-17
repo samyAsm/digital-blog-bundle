@@ -31,7 +31,7 @@
             <div class="nav-menu" style="max-height: 300px;overflow-y: auto">
                 {% for parent_category in parent_blog_categories() %}
                     {% if parent_category.articleCategories|length != 0 %}
-                        <a href="{{ url('blog_article_by_category', { category_id: parent_category.uniqKey, category_name: parent_category.categoryName }) }}" class="nav-menu-item">
+                        <a href="{{ url('digital_blog_article_by_category', { category_id: parent_category.uniqKey, category_name: parent_category.categoryName }) }}" class="nav-menu-item">
                             {{ parent_category.categoryName }}
                         </a>
                     {% endif %}
