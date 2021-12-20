@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2832a104-c9a5-4025-ac70-ef4f95bb3cff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Resources/views/parts/article-aside.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resources/views/parts/category-aside.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Back/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Back/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/category-archives.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/category-archives.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/back/articles/article-list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/back/articles/article-list.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,6 +150,7 @@
       <find>blog_article_by_category</find>
       <find>'blog_article_by_category'</find>
       <find>twig_p_digital_blog_hero_bg</find>
+      <find>.name</find>
     </findStrings>
     <replaceStrings>
       <replace>DhiBlogBundle</replace>
@@ -188,11 +185,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Resources/views/parts/hero-category.html.twig" />
         <option value="$PROJECT_DIR$/src/Resources/views/parts/article-content.html.twig" />
-        <option value="$PROJECT_DIR$/src/Resources/views/back/articles/article-list.html.twig" />
         <option value="$PROJECT_DIR$/src/Resources/views/parts/category-aside.html.twig" />
         <option value="$PROJECT_DIR$/src/Resources/views/parts/article-aside.html.twig" />
         <option value="$PROJECT_DIR$/src/Resources/views/category-archives.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/Back/ArticleController.php" />
+        <option value="$PROJECT_DIR$/src/Resources/views/back/articles/article-list.html.twig" />
       </list>
     </option>
   </component>
@@ -448,18 +445,17 @@
       <workItem from="1639677228414" duration="352000" />
       <workItem from="1639732366856" duration="11434000" />
       <workItem from="1639913410940" duration="595000" />
-      <workItem from="1639990435224" duration="8125000" />
+      <workItem from="1639990435224" duration="8767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34967000" />
+    <option name="totallyTimeSpent" value="35609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24622357" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24622357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -472,7 +468,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924472" visible="true" weight="0.25684932" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924472" visible="true" weight="0.25684932" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007553" side_tool="true" weight="0.3219178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
