@@ -42,7 +42,8 @@
                             <tr>
                                 <td style="max-width: 15px;">{{ k+1 }}</td>
                                 <th class="text-left col-4">
-                                    {{ article.preview }}
+                                    <img class="d-block mx-auto" style="border-radius: 3px;height: 40px;width: 60px;object-fit: cover"
+                                            src="{{ (article.preview)?asset(twig_p_article_image_path ~ article.preview):"no-bg" }}" alt="#">
                                 </th>
                                 <th class="text-left col-4">
                                     {{ article.title }}

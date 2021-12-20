@@ -62,13 +62,16 @@ digital_blog:
     color_secondary: '#f5ec78'
     
   routing:
-    prefix: '/v1/blog'
+    #You can put what you want
+    prefix: '/my-blog'
   
   store:
     author_image_store: 'uploads/author/'
     article_image_store: 'uploads/article/'
     category_image_store: 'uploads/category/'
 ```
+
+Make sure all these directories have write access
 
 Open the file ```config/packages/security.yaml``` and add this content
 

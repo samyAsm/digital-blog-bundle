@@ -2,7 +2,7 @@
     <div class="archive-article">
         <div class="row">
             <div class="col-md-6 article-preview">
-                <img src="{{ (article.preview)?asset(twig_p_article_image_path ~ article.preview):asset(twig_p_category_image_path ~ category.preview) }}" alt="#">
+                <img src="{{ (article.preview)?asset(twig_p_article_image_path ~ article.preview):"no-bg" }}" alt="#">
                 <div class="article-date">
                     <div class="day">{{ article.publishedAt|date('d') }}</div>
                     <div class="month">{{ article.publishedAt|date('m') }}</div>

@@ -1,5 +1,5 @@
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center"
-         style="max-height: 440px;background-image: url({{ asset(twig_p_digital_blog_hero_bg??'assets-app/images/banner.jpg') }});background-position: center center">
+         style="max-height: 440px;background-image: url({{ (category is defined)?asset(twig_p_category_image_path ~ category.preview):(twig_p_digital_blog_hero_bg??'no-bg') }});background-position: center center">
     <div class="container pt-5 mt-5" data-aos="fade-in">
         <h1> {{ category.categoryName }} </h1>
         <h2>{{ category.description }}</h2>
