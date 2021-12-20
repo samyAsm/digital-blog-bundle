@@ -4,11 +4,19 @@
 
     <!-- ======= Top Bar ======= -->
 
-    {% include '@DigitalBlog/parts/navbar-top.html.twig' %}
+    {% if template_exists('digital-blog/parts/navbar-top.html') %}
+        {% include 'digital-blog/parts/navbar-top.html' %}
+    {% else %}
+        {% include '@DigitalBlog/parts/navbar-top.html.twig' %}
+    {% endif %}
 
     <!-- ======= Header ======= -->
 
-    {% include '@DigitalBlog/parts/navbar.html.twig' %}
+    {% if template_exists('digital-blog/parts/navbar.html.twig') %}
+        {% include 'digital-blog/parts/navbar.html.twig' %}
+    {% else %}
+        {% include '@DigitalBlog/parts/navbar.html.twig' %}
+    {% endif %}
 
     <!-- End Header -->
 
@@ -22,6 +30,10 @@
         {% endblock content %}
     </div>
 
-    {% include '@DigitalBlog/parts/footer-layout.html.twig' %}
+    {% if template_exists('digital-blog/parts/footer-layout.html.twig') %}
+        {% include 'digital-blog/parts/footer-layout.html.twig' %}
+    {% else %}
+        {% include '@DigitalBlog/parts/footer-layout.html.twig' %}
+    {% endif %}
 
 {% endblock %}

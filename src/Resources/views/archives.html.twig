@@ -18,7 +18,11 @@
 
 {% block before_content %}
     <!-- ======= Hero Section ======= -->
-    {% include '@DigitalBlog/parts/hero.html.twig' %}
+    {% if template_exists('digital-blog/parts/hero.html.twig') %}
+        {% include 'digital-blog/parts/hero.html.twig' %}
+    {% else %}
+        {% include '@DigitalBlog/parts/hero.html.twig' %}
+    {% endif %}
     <!-- End Hero -->
 {% endblock before_content %}
 
@@ -33,14 +37,16 @@
 
                     <div class="row">
                         {% for article in articles %}
-                            {% include '@DigitalBlog/parts/article-content.html.twig' %}
+                            {% if template_exists('digital-blog/parts/article-content.html.twig') %}
+                                {% include 'digital-blog/parts/article-content.html.twig' %}
+                            {% else %}
+                                {% include '@DigitalBlog/parts/article-content.html.twig' %}
+                            {% endif %}
                         {% endfor %}
-
                     </div>
 
                     {% if next_page %}
                         <div class="oldest-articles mt-5 d-flex justify-content-end">
-                            {{ current }} {{ total }} {{ limit }}
                             <a href="{{ url('digital_blog_home') }}?page={{ page }}">
                                 {{ "Les plus anciens"|trans }}
                                 <i class="fas fa-angle-double-right"></i>

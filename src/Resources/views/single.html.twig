@@ -18,7 +18,11 @@
 
 {% block before_content %}
     <!-- ======= Hero Section ======= -->
-    {% include '@DigitalBlog/parts/hero-article.html.twig' %}
+    {% if template_exists('digital-blog/parts/hero.html.twig') %}
+        {% include 'digital-blog/parts/hero.html.twig' %}
+    {% else %}
+        {% include '@DigitalBlog/parts/hero.html.twig' %}
+    {% endif %}
     <!-- End Hero -->
 {% endblock before_content %}
 

@@ -17,7 +17,11 @@
 
 {% block before_content %}
     <!-- ======= Hero Section ======= -->
-    {% include '@DigitalBlog/parts/hero-category.html.twig' %}
+    {% if template_exists('digital-blog/parts/hero-category.html.twig') %}
+        {% include 'digital-blog/parts/hero-category.html.twig' %}
+    {% else %}
+        {% include '@DigitalBlog/parts/hero-category.html.twig' %}
+    {% endif %}
     <!-- End Hero -->
 {% endblock before_content %}
 
@@ -28,7 +32,11 @@
             <div class="row">
                 <div class="col-lg-9 mb-5 pt-5">
                     {% for article in articles %}
-                        {% include '@DigitalBlog/parts/article-content.html.twig' %}
+                        {% if template_exists('digital-blog/parts/article-content.html.twig') %}
+                            {% include 'digital-blog/parts/article-content.html.twig' %}
+                        {% else %}
+                            {% include '@DigitalBlog/parts/article-content.html.twig' %}
+                        {% endif %}
                     {% endfor %}
                 </div>
                 <div class="col-lg-3 pl-lg-3 pt-5">
