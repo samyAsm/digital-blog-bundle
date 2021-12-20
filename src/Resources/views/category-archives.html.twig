@@ -46,19 +46,11 @@
                     <div class="row px-2">
                         {% for blog_latest_article in blog_latest_articles() %}
                             {% if blog_latest_article.articleCategories|length != 0 %}
-                                <a href="{{ url('digital_blog_article', { article_id: blog_latest_article.uniqKey, article_slug: blog_latest_article.slug }) }}" class="article-aside col-12 px-2 py-2 mb-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-4 col-md-3 col-4 article-thumb">
-                                            <img src="{{ (blog_latest_article.preview)?asset(twig_p_article_image_path ~ blog_latest_article.preview):"" }}" alt="">
-                                        </div>
-                                        <div class="col-lg-8 col-md-9 col-8 py-2">
-                                            <h5 class="text-theme-primary">
-                                                {{ blog_latest_article.title }}
-                                            </h5>
-                                            <span class="small text-black-50">{{ blog_latest_article.publishedAt|date("d M Y") }}</span>
-                                        </div>
-                                    </div>
-                                </a>
+                                {% if template_exists('digital-blog/parts/article-aside.html.twig') %}
+                                    {% include 'digital-blog/parts/article-aside.html.twig' %}
+                                {% else %}
+                                    {% include '@DigitalBlog/parts/article-aside.html.twig' %}
+                                {% endif %}
                             {% endif %}
                         {% endfor %}
                     </div>
@@ -68,11 +60,11 @@
                     <div class="row px-2 pb-5">
                         {% for blog_category in blog_categories() %}
                             {% if blog_category.articleCategories|length != 0 %}
-                                <a href="{{ url('digital_blog_article_by_category', { category_id: blog_category.uniqKey, category_name: blog_category.categoryName }) }}"
-                                   class="aside-category mb-2 col-12">
-                                    {{ blog_category.categoryName }}
-                                    ({{ blog_category.articleCategories|length }})
-                                </a>
+                                {% if template_exists('digital-blog/parts/category-aside.html.twig') %}
+                                    {% include 'digital-blog/parts/category-aside.html.twig' %}
+                                {% else %}
+                                    {% include '@DigitalBlog/parts/category-aside.html.twig' %}
+                                {% endif %}
                             {% endif %}
                         {% endfor %}
                     </div>

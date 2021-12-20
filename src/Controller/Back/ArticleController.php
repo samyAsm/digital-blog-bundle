@@ -15,6 +15,7 @@ use Dhi\BlogBundle\Responses\Article\ArticleList;
 use Dhi\BlogBundle\Responses\Article\ArticleSearch;
 use Dhi\BlogBundle\Responses\Article\ArticleStored;
 use Dhi\BlogBundle\Responses\Article\ArticleStoreFail;
+use Dhi\BlogBundle\Services\AuthorAuthenticatorService;
 use Dhi\BlogBundle\Services\Managers\ArticleManagerService;
 use Swagger\Annotations as SWG;
 use Symfony\Component\HttpFoundation\Response;
@@ -105,15 +106,18 @@ class ArticleController extends CoreController
      * )
      *
      * @param ArticleManagerService $articleManagerService
-     * @return Response
+     * @param AuthorAuthenticatorService $authenticatorService
+     * @return ArticleStored|ArticleStoreFail
      */
-    public function store(ArticleManagerService $articleManagerService)
+    public function store(ArticleManagerService $articleManagerService, AuthorAuthenticatorService $authenticatorService)
     {
         try {
 
             $article = $articleManagerService->buildArticleFromRequest(
                 $articleManagerService->getArticleFromRequest(false)
             );
+
+            $article->setAuthor($authenticatorService->getAuthor());
 
             $this->validate($article);
 

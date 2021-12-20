@@ -1,0 +1,5 @@
+<a href="{{ url('digital_blog_article_by_category', { category_id: blog_category.uniqKey, category_name: blog_category.categoryName }) }}"
+   class="aside-category mb-2 col-12">
+    {{ blog_category.categoryName }}
+    ({{ blog_category.articleCategories|length }})
+</a>
