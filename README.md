@@ -82,7 +82,7 @@ security:
         
         #Add encoder for Author entity, considered as users in administration
         
-        DhiBlogBundle\Entity\Author:
+        Dhi\BlogBundle\Entity\Author:
             algorithm: sha512
             cost: 12
 ```
@@ -109,4 +109,10 @@ DIGITAL_BLOG_ADMIN_NAME=admin
 
 ```
 php bin/console doctrine:schema:update --force
+```
+
+### Install first super admin
+
+```
+php bin/console digital:blog:setup
 ```

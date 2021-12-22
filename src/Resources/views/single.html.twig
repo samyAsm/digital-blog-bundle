@@ -74,6 +74,61 @@
                         </div>
                     </div>
 
+                    <div class="container mt-5" style="background-color: rgba(246,246,250,0.48);">
+                        {% if article.allowComment %}
+
+                            <div class="blog-comments py-4">
+
+                                <h5 class="py-4">{{ "Les derniers commentaires"|trans }}</h5>
+
+                                {% for comment in article.comments %}
+                                    <div class="comment py-4">
+                                        <h6><b>{{ comment.authorName }}</b></h6>
+                                        <p class="small">{{ comment.createdAt|date("d, M Y H:i") }}</p>
+                                        <p class="small">{{ comment.comment }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                            <div class="comment-section py-4">
+                                <form action="{{ url('digital_blog_comment_store') }}" method="post" class="ajax_form">
+
+                                    <input type="hidden" name="article_id" required value="{{ article.uniqKey }}">
+
+                                    <div class="form-row">
+                                        <h5>{{ "Vous désirez laisser un commentaire ?"|trans }}</h5>
+                                    </div>
+
+                                    <div class="form-group py-2">
+                                        <label for="author_name" class="pb-2">{{ "Votre nom"|trans }}</label>
+                                        <input type="text" id="author_name" name="author_name" class="form-control" required>
+                                    </div>
+
+                                    <div class="form-group py-2">
+                                        <label for="author_email" class="pb-2">{{ "Votre email"|trans }}</label>
+                                        <input type="email" id="author_email" name="author_email" class="form-control" required>
+                                    </div>
+
+                                    <div class="form-group py-2">
+                                        <label for="comment" class="pb-2">{{ "Votre commentaire"|trans }}</label>
+                                        <textarea name="comment" id="comment" maxlength="255" required rows="3" class="form-control"></textarea>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <div class="form-response"></div>
+                                        <button type="submit" class="btn btn-outline-theme-primary mt-4 btn-submit">
+                                            {{ "Soumetre un commentaire"|trans }}
+                                        </button>
+                                        <div class="loader mx-auto my-3 d-none"></div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        {% endif %}
+
+                    </div>
+
                 </div>
 
                 <div class="col-lg-3 col-md-4 pl-lg-3">
