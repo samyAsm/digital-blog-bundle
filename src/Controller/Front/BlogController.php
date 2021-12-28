@@ -36,7 +36,7 @@ class BlogController extends AbstractRESTController
     {
         try {
 
-            $articles = $this->repositoryService->getArticleRepository()->getLatest();
+            $articles = $this->repositoryService->getArticleRepository()->getLatest(100);
 
             list($articles, $page, $current, $total, $limit, $next_page) = $this->paginator->paginateWithInterval($articles);
 
