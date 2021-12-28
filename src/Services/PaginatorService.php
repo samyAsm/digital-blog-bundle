@@ -60,7 +60,7 @@ class PaginatorService
 
         $next_page = $next_paginated->count();
 
-        return [$paginated, $page, $current, $total, $this->limit, $next_page];
+        return [$paginated, $page+1, $current, $total, $this->limit, $next_page];
 
     }
 
