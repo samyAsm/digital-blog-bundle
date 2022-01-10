@@ -90,6 +90,12 @@ class ArticleManagerService
         $pixel_code = $this->request->get('pixel_code');
         $allow_comment = $this->getBool($this->request->get('allow_comment'));
 
+        if (!strlen($title) < 3){
+            throw new Alert(
+                $this->translator->trans("Veuillez fournir un titre d'au moins 3 caractères")
+            );
+        }
+
         foreach ($article->getArticleCategories() as $index => $articleCategory) {
             $article->removeArticleCategory($articleCategory);
             $this->managerService->deleteData($articleCategory);
@@ -118,6 +124,8 @@ class ArticleManagerService
                 $article_categories[] = $ac;
             }
         }
+
+        if(!$slug) $slug = $title;
 
         $slug = strtolower($slug);
 
