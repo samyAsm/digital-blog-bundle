@@ -46,9 +46,13 @@
                                             src="{{ (article.preview)?asset(twig_p_article_image_path ~ article.preview):"no-bg" }}" alt="#">
                                 </th>
                                 <th class="text-left col-4">
-                                    <a target="_blank" href="{{ url('digital_blog_article', { article_id: article.uniqKey, article_slug: article.slug }) }}">
+                                    {% if article.slug %}
+                                        <a target="_blank" href="{{ url('digital_blog_article', { article_id: article.uniqKey, article_slug: article.slug }) }}">
+                                            {{ article.title }}
+                                        </a>
+                                    {% else %}
                                         {{ article.title }}
-                                    </a>
+                                    {% endif %}
                                 </th>
                                 <th class="col-2">
                                     {% if article.author %}

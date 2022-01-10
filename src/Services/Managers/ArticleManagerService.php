@@ -16,6 +16,7 @@ use Dhi\BlogBundle\Services\DirectoryService;
 use Dhi\BlogBundle\Services\FileUploadService;
 use Dhi\BlogBundle\Services\ManagerService;
 use Dhi\BlogBundle\Services\RepositoryService;
+use Dhi\BlogBundle\Utils\StringMan;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -127,9 +128,7 @@ class ArticleManagerService
 
         if(!$slug) $slug = $title;
 
-        $slug = strtolower($slug);
-
-        $slug = preg_replace("#[ _]#","-", $slug);
+        $slug = (new StringMan())->slug($slug);
 
         $article
             ->setStatus(Article::STATUTES[$status])

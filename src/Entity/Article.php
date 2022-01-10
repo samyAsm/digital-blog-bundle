@@ -4,6 +4,7 @@ namespace Dhi\BlogBundle\Entity;
 
 use Dhi\BlogBundle\Core\Entity\CoreEntity;
 use Dhi\BlogBundle\Repository\ArticleRepository;
+use Dhi\BlogBundle\Utils\StringMan;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -306,7 +307,9 @@ class Article extends CoreEntity
 
     public function getSlug(): ?string
     {
-        return $this->slug;
+        if ($this->slug) return $this->slug;
+
+        return (new StringMan())->slug($this->title);
     }
 
     public function setSlug(?string $slug): self
