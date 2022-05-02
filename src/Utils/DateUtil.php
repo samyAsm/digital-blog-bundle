@@ -4,7 +4,7 @@
 namespace Dhi\BlogBundle\Utils;
 
 
-use App\Core\Exceptions\Alert;
+use Dhi\BlogBundle\Exceptions\Alert;
 use DateInterval;
 use DatePeriod;
 use DateTime;

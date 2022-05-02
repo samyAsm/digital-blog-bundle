@@ -6,7 +6,7 @@
 
 namespace Dhi\BlogBundle\Controller\Back;
 
-use Dhi\BlogBundle\Annotations\MustAuthenticate;
+use Dhi\BlogBundle\Annotations\AuthorMustAuthenticate;
 use Dhi\BlogBundle\Core\Controller\CoreController;
 use Dhi\BlogBundle\Responses\ArticleComment\ArticleCommentForm;
 use Dhi\BlogBundle\Responses\ArticleComment\DeleteArticleComment;
@@ -20,7 +20,7 @@ use Symfony\Component\Routing\Annotation\Route;
  *
  * @SWG\Tag(name="Administration ▶ Blog ▶ ArticleComments")
  *
- * @MustAuthenticate()
+ * @AuthorMustAuthenticate()
  */
 class ArticleCommentViewController extends CoreController
 {

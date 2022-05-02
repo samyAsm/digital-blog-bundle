@@ -4,9 +4,9 @@
 namespace Dhi\BlogBundle\Subscribers;
 
 
-use Dhi\BlogBundle\Annotations\MustAuthenticate;
+use Dhi\BlogBundle\Annotations\AuthorAuthorMustAuthenticate;
 use Dhi\BlogBundle\Core\Controller\AbstractRESTController;
-use Dhi\BlogBundle\Exceptions\NotAuthenticatedException;
+use Dhi\BlogBundle\Exceptions\NotAuthenticatedOnBlogException;
 use Dhi\BlogBundle\Services\AuthorAuthenticatorService;
 use Dhi\BlogBundle\Services\KernelService;
 use Doctrine\Common\Annotations\Reader;
@@ -50,7 +50,6 @@ class AuthorAuthenticatorSubscriber
 
     /**
      * @param ControllerEvent $event
-     * @throws \App\Exceptions\InvalidArgumentException
      * @throws \Doctrine\ORM\NonUniqueResultException
      * @throws \ReflectionException
      * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
@@ -77,8 +76,6 @@ class AuthorAuthenticatorSubscriber
 
     /**
      * @param \ReflectionMethod $method
-     * @throws \App\Exceptions\InvalidArgumentException
-     * @throws \Doctrine\ORM\NonUniqueResultException
      * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
     private function guardMethod(\ReflectionMethod $method): void
@@ -91,7 +88,6 @@ class AuthorAuthenticatorSubscriber
     /**
      * @param \ReflectionObject $object
      * @param \ReflectionMethod $method
-     * @throws \App\Exceptions\InvalidArgumentException
      * @throws \Doctrine\ORM\NonUniqueResultException
      * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
      */
@@ -110,22 +106,12 @@ class AuthorAuthenticatorSubscriber
     private function processGuarder($annotation, \ReflectionMethod $method): void
     {
 
-        if ($annotation instanceof MustAuthenticate) {
+        if ($annotation instanceof AuthorMustAuthenticate) {
 
             $auth = $this->authenticatorService->getAuthor();
 
-            $requested = $this->request->getSchemeAndHttpHost()
-                . $this->request->getRequestUri();
-
-            $m = strtoupper($this->request->getMethod());
-
-            if ($m === "GET"
-                && !$this->request->isXmlHttpRequest()
-                && !preg_match("#(login|logout|notification|doc)#", $requested))
-                $this->sessionInterface->set('requested', $requested);
-
             if (!$auth) {
-                throw new NotAuthenticatedException("User not authenticated");
+                throw new NotAuthenticatedOnBlogException("User not authenticated");
             }
         }
     }
@@ -135,7 +121,7 @@ class AuthorAuthenticatorSubscriber
         $action = null;
 
         foreach ($this->reader->getMethodAnnotations($method) as $methodAnnotation) {
-            if ($methodAnnotation instanceof MustAuthenticate) {
+            if ($methodAnnotation instanceof AuthorMustAuthenticate) {
                 $action = $methodAnnotation;
                 break;
             }

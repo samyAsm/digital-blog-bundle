@@ -6,7 +6,7 @@ namespace Dhi\BlogBundle\Annotations;
  * @Annotation
  * @Target({"METHOD","CLASS"})
  */
-class MustAuthenticate
+class AuthorMustAuthenticate
 {
     public $description;
 
@@ -14,7 +14,7 @@ class MustAuthenticate
 
     /**
      * @param mixed $description
-     * @return MustAuthenticate
+     * @return AuthorMustAuthenticate
      */
     public function setDescription(?string $description)
     {
@@ -25,7 +25,7 @@ class MustAuthenticate
 
     /**
      * @param mixed $name
-     * @return MustAuthenticate
+     * @return AuthorMustAuthenticate
      */
     public function setName(?string $name)
     {

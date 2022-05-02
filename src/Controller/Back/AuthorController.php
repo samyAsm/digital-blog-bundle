@@ -6,7 +6,7 @@
 
 namespace Dhi\BlogBundle\Controller\Back;
 
-use Dhi\BlogBundle\Annotations\MustAuthenticate;
+use Dhi\BlogBundle\Annotations\AuthorMustAuthenticate;
 use Dhi\BlogBundle\Core\Controller\CoreController;
 use Dhi\BlogBundle\Responses\Author\AuthorDeleted;
 use Dhi\BlogBundle\Responses\Author\AuthorDeletionFail;
@@ -25,7 +25,7 @@ use Symfony\Component\Routing\Annotation\Route;
  *
  * @SWG\Tag(name="Administration ▶ Blog ▶ Categories")
  *
- * @MustAuthenticate()
+ * @AuthorMustAuthenticate()
  */
 class AuthorController extends CoreController
 {

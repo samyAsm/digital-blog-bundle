@@ -7,7 +7,7 @@
 namespace Dhi\BlogBundle\Controller\Back;
 
 
-use Dhi\BlogBundle\Annotations\MustAuthenticate;
+use Dhi\BlogBundle\Annotations\AuthorMustAuthenticate;
 use Dhi\BlogBundle\Core\Controller\CoreController;
 use Dhi\BlogBundle\Entity\Article;
 use Dhi\BlogBundle\Responses\Article\ArticleDeletionFail;
@@ -23,7 +23,7 @@ use Symfony\Component\Routing\Annotation\Route;
  *
  * @SWG\Tag(name="Administration ▶ Blog ▶ Articles")
  *
- * @MustAuthenticate()
+ * @AuthorMustAuthenticate()
  */
 class ArticleViewController extends CoreController
 {

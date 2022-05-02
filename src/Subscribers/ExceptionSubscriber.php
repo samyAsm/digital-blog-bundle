@@ -4,7 +4,7 @@ namespace Dhi\BlogBundle\Subscribers;
 
 use Dhi\BlogBundle\Core\Data\APIResponse;
 use Dhi\BlogBundle\Core\Subscriber\CoreSubscriber;
-use Dhi\BlogBundle\Exceptions\NotAuthenticatedException;
+use Dhi\BlogBundle\Exceptions\NotAuthenticatedOnBlogException;
 use Dhi\BlogBundle\Responses\Auth\RedirectToNotAuthenticatedResponse;
 use Dhi\BlogBundle\Responses\Auth\RedirectToNotAuthorizedResponse;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
@@ -27,14 +27,8 @@ class ExceptionSubscriber
         //TODO: Redirect to controller which will render custom responses
 
 
-        if ($event->getThrowable() instanceof MethodNotAllowedHttpException) {
-            $event->setResponse(new RedirectToNotAuthorizedResponse(new APIResponse()));
-        } elseif ($event->getThrowable() instanceof NotFoundHttpException) {
-            $event->setResponse(new RedirectToNotAuthorizedResponse(new APIResponse()));
-        } elseif ($event->getThrowable() instanceof NotAuthenticatedException) {
+        if ($event->getThrowable() instanceof NotAuthenticatedOnBlogException) {
             $event->setResponse(new RedirectToNotAuthenticatedResponse(new APIResponse()));
-        } else {
-            $event->setResponse(new RedirectToNotAuthorizedResponse(new APIResponse()));
         }
     }
 }
