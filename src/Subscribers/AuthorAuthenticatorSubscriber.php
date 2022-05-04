@@ -4,7 +4,7 @@
 namespace Dhi\BlogBundle\Subscribers;
 
 
-use Dhi\BlogBundle\Annotations\AuthorAuthorMustAuthenticate;
+use Dhi\BlogBundle\Annotations\AuthorMustAuthenticate;
 use Dhi\BlogBundle\Core\Controller\AbstractRESTController;
 use Dhi\BlogBundle\Exceptions\NotAuthenticatedOnBlogException;
 use Dhi\BlogBundle\Services\AuthorAuthenticatorService;
@@ -53,6 +53,7 @@ class AuthorAuthenticatorSubscriber
      * @throws \Doctrine\ORM\NonUniqueResultException
      * @throws \ReflectionException
      * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
+     * @throws NotAuthenticatedOnBlogException
      */
     public function onKernelController(ControllerEvent $event)
     {
@@ -90,6 +91,7 @@ class AuthorAuthenticatorSubscriber
      * @param \ReflectionMethod $method
      * @throws \Doctrine\ORM\NonUniqueResultException
      * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
+     * @throws NotAuthenticatedOnBlogException
      */
     private function guardClass(\ReflectionObject $object, \ReflectionMethod $method): void
     {
@@ -102,6 +104,7 @@ class AuthorAuthenticatorSubscriber
      * @param $annotation
      * @param \ReflectionMethod $method
      * @throws \Dhi\BlogBundle\Exceptions\InvalidArgumentException
+     * @throws NotAuthenticatedOnBlogException
      */
     private function processGuarder($annotation, \ReflectionMethod $method): void
     {

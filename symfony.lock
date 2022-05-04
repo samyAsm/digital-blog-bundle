@@ -218,6 +218,9 @@
     "symfony/http-kernel": {
         "version": "4.4.x-dev"
     },
+    "symfony/mime": {
+        "version": "5.4.x-dev"
+    },
     "symfony/monolog-bridge": {
         "version": "5.2.x-dev"
     },
