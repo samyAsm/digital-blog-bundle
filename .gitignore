@@ -3,7 +3,25 @@ composer.phar
 composer.lock
 .env
 .idea/
+docker-compose.override.yml
+docker-compose.yml
+symfony.lock
+/translations
+/public
+/config
+/.idea
+/bin
 
 # Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # composer.lock
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
