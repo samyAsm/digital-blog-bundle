@@ -53,10 +53,5 @@
     "allow-plugins": {
       "symfony/flex": true
     }
-  },
-  "scripts": {
-    "auto-scripts": {
-      "assets:install %PUBLIC_DIR%": "symfony-cmd"
-    }
   }
 }
