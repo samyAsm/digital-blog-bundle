@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="358">
+              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -330,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651659251032</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix: symfony/http-foundation version constraint">
+      <created>1651659739000</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651659739000</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix: doctrine-common version constraint">
+      <created>1651659853002</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651659853002</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -374,7 +388,9 @@
     <MESSAGE value="Fix: app logic management" />
     <MESSAGE value="Update: ignore some files" />
     <MESSAGE value="Fix: removed post update command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: removed post update command" />
+    <MESSAGE value="Fix: symfony/http-foundation version constraint" />
+    <MESSAGE value="Fix: doctrine-common version constraint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: doctrine-common version constraint" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Resources/views/back/categories/category-list.html.twig">
@@ -697,8 +713,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="358">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
         </state>
       </provider>
     </entry>
