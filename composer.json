@@ -37,7 +37,7 @@
     "knplabs/knp-paginator-bundle": "^5.1",
     "symfony/yaml": "^3.4|^4.0|^5.0",
     "twig/twig": "^1.41|^2.10|^3.0",
-    "doctrine/common": "3.3.x-dev"
+    "doctrine/common": "^3.3"
   },
   "autoload": {
     "psr-4": {
