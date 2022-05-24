@@ -50,11 +50,14 @@ class ArticleRepository extends CoreRepository
 
     /**
      * @param int $max
+     * @param $status
      * @return Article[]
      */
-    public function getLatest($max = 5)
+    public function getLatest($max = 5, $status = Article::STATUTES['PUBLISHED'])
     {
         return $this->getQueryBuilderWithUnDeleted()
+            ->andWhere('a.status = :status')
+            ->setParameter('status', $status)
             ->getQuery()
             ->setMaxResults($max)
             ->getResult();

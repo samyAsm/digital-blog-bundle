@@ -93,7 +93,7 @@ class ArticleManagerService
         $pixel_code = $this->request->request->get('pixel_code');
         $allow_comment = $this->getBool($this->request->request->get('allow_comment'));
 
-        if (!strlen($title) < 3){
+        if (strlen($title) < 3){
             throw new Alert(
                 $this->translator->trans("Veuillez fournir un titre d'au moins 3 caractères")
             );
