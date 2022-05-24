@@ -25,3 +25,5 @@ symfony.lock
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+/gitkey
