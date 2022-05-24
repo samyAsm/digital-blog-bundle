@@ -53,7 +53,7 @@ class CategoryManagerService
                                 DirectoryService $directoryService,
                                 FileUploadService $uploadService)
     {
-        $this->request = $requestServiceProvider->getRequest()->request;
+        $this->request = $requestServiceProvider->getRequest();
         $this->repositoryService = $repositoryService;
         $this->translator = $translatorProviderService->getTranslator();
         $this->directoryService = $directoryService;
@@ -69,9 +69,9 @@ class CategoryManagerService
     {
         if (!$category) $category = new Category();
 
-        $category_name = $this->request->get('category_name');
-        $description = $this->request->get('description');
-        $parent_category = $this->request->get('parent_category');
+        $category_name = $this->request->request->get('category_name');
+        $description = $this->request->request->get('description');
+        $parent_category = $this->request->request->get('parent_category');
 
         $category
             ->setCategoryName($category_name)
@@ -110,7 +110,7 @@ class CategoryManagerService
     public function getCategoryFromRequest(?bool $strict = true): ?Category
     {
 
-        $category_id = $this->request->get('category_id');
+        $category_id = $this->request->request->get('category_id');
 
         /**
          * @var Category|null $category

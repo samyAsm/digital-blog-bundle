@@ -66,7 +66,7 @@ class ArticleManagerService
                                 DirectoryService $directoryService,
                                 FileUploadService $uploadService)
     {
-        $this->request = $requestServiceProvider->getRequest()->request;
+        $this->request = $requestServiceProvider->getRequest();
         $this->repositoryService = $repositoryService;
         $this->translator = $translatorProviderService->getTranslator();
         $this->managerService = $managerService;
@@ -83,15 +83,15 @@ class ArticleManagerService
     {
         if (!$article) $article = new Article();
 
-        $title = $this->request->get('title');
-        $slug = $this->request->get('slug');
-        $content = $this->request->get('content');
-        $status = $this->request->get('status');
-        $tags = $this->request->get('tags');
-        $categories = $this->request->get('categories');
-        $summary = $this->request->get('summary');
-        $pixel_code = $this->request->get('pixel_code');
-        $allow_comment = $this->getBool($this->request->get('allow_comment'));
+        $title = $this->request->request->get('title');
+        $slug = $this->request->request->get('slug');
+        $content = $this->request->request->get('content');
+        $status = $this->request->request->get('status');
+        $tags = $this->request->request->get('tags');
+        $categories = $this->request->request->get('categories');
+        $summary = $this->request->request->get('summary');
+        $pixel_code = $this->request->request->get('pixel_code');
+        $allow_comment = $this->getBool($this->request->request->get('allow_comment'));
 
         if (!strlen($title) < 3){
             throw new Alert(
@@ -173,7 +173,7 @@ class ArticleManagerService
     public function getArticleFromRequest(?bool $strict = true): ?Article
     {
 
-        $article_id = $this->request->get('article_id');
+        $article_id = $this->request->request->get('article_id');
 
         /**
          * @var Article|null $article

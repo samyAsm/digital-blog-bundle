@@ -39,7 +39,7 @@ class ArticleCommentManagerService
                                 RepositoryService $repositoryService,
                                 TranslatorProviderService $translatorProviderService)
     {
-        $this->request = $requestServiceProvider->getRequest()->request;
+        $this->request = $requestServiceProvider->getRequest();
         $this->repositoryService = $repositoryService;
         $this->translator = $translatorProviderService->getTranslator();
     }
@@ -54,9 +54,9 @@ class ArticleCommentManagerService
     {
         if (!$article_comment) $article_comment = new ArticleComment();
 
-        $author_name = $this->request->get('author_name');
-        $author_email = $this->request->get('author_email');
-        $comment = $this->request->get('comment');
+        $author_name = $this->request->request->get('author_name');
+        $author_email = $this->request->request->get('author_email');
+        $comment = $this->request->request->get('comment');
 
         $article_comment
             ->setAuthorName($author_name)
@@ -76,7 +76,7 @@ class ArticleCommentManagerService
     public function getArticleCommentFromRequest(?bool $strict = true): ?ArticleComment
     {
 
-        $article_comment_id = $this->request->get('article_comment_id');
+        $article_comment_id = $this->request->request->get('article_comment_id');
 
         /**
          * @var ArticleComment|null $article_comment

@@ -56,7 +56,7 @@ class AuthorManagerService
                                 DirectoryService $directoryService,
                                 FileUploadService $uploadService)
     {
-        $this->request = $requestServiceProvider->getRequest()->request;
+        $this->request = $requestServiceProvider->getRequest();
         $this->repositoryService = $repositoryService;
         $this->translator = $translatorProviderService->getTranslator();
         $this->directoryService = $directoryService;
@@ -72,13 +72,13 @@ class AuthorManagerService
     {
         if (!$author) $author = new Author();
 
-        $author_name = $this->request->get('author_name');
-        $last_name = $this->request->get('last_name');
-        $first_name = $this->request->get('first_name');
-        $email = $this->request->get('email');
-        $description = $this->request->get('description');
-        $can_publish = $this->getBool($this->request->get('can_publish'));
-        $is_admin = $this->getBool($this->request->get('is_admin'));
+        $author_name = $this->request->request->get('author_name');
+        $last_name = $this->request->request->get('last_name');
+        $first_name = $this->request->request->get('first_name');
+        $email = $this->request->request->get('email');
+        $description = $this->request->request->get('description');
+        $can_publish = $this->getBool($this->request->request->get('can_publish'));
+        $is_admin = $this->getBool($this->request->request->get('is_admin'));
 
         $author
             ->setAuthorName($author_name)
@@ -118,7 +118,7 @@ class AuthorManagerService
     public function getAuthorFromRequest(?bool $strict = true): ?Author
     {
 
-        $author_id = $this->request->get('author_id');
+        $author_id = $this->request->request->get('author_id');
 
         /**
          * @var Author|null $author
