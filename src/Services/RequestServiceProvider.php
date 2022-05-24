@@ -20,10 +20,12 @@ class RequestServiceProvider
     }
 
     /**
-     * @return Request|null
+     * @return Request|InputBag|null
      */
-    public function getRequest(): ?Request
+    public function getRequest()
     {
-        return $this->request;
+        if ($this->request->getContent()) return $this->request;
+
+        return $this->request->request;
     }
 }

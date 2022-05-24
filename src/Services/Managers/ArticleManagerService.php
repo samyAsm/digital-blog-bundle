@@ -16,6 +16,8 @@ use Dhi\BlogBundle\Services\DirectoryService;
 use Dhi\BlogBundle\Services\FileUploadService;
 use Dhi\BlogBundle\Services\ManagerService;
 use Dhi\BlogBundle\Services\RepositoryService;
+use Dhi\BlogBundle\Services\RequestServiceProvider;
+use Dhi\BlogBundle\Services\TranslatorProviderService;
 use Dhi\BlogBundle\Utils\StringMan;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -50,23 +52,23 @@ class ArticleManagerService
 
     /**
      * PaymentManagerService constructor.
-     * @param RequestStack $requestStack
+     * @param RequestServiceProvider $requestServiceProvider
      * @param RepositoryService $repositoryService
      * @param ManagerService $managerService
-     * @param TranslatorInterface $translator
+     * @param TranslatorProviderService $translatorProviderService
      * @param DirectoryService $directoryService
      * @param FileUploadService $uploadService
      */
-    public function __construct(RequestStack $requestStack,
+    public function __construct(RequestServiceProvider $requestServiceProvider,
                                 RepositoryService $repositoryService,
                                 ManagerService $managerService,
-                                TranslatorInterface $translator,
+                                TranslatorProviderService $translatorProviderService,
                                 DirectoryService $directoryService,
                                 FileUploadService $uploadService)
     {
-        $this->request = $requestStack->getCurrentRequest();
+        $this->request = $requestServiceProvider->getRequest();
         $this->repositoryService = $repositoryService;
-        $this->translator = $translator;
+        $this->translator = $translatorProviderService->getTranslator();
         $this->managerService = $managerService;
         $this->directoryService = $directoryService;
         $this->uploadService = $uploadService;

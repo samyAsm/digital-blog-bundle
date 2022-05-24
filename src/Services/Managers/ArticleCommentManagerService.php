@@ -11,6 +11,8 @@ use Dhi\BlogBundle\Core\Exceptions\Alert;
 use Dhi\BlogBundle\Entity\Article;
 use Dhi\BlogBundle\Entity\ArticleComment;
 use Dhi\BlogBundle\Services\RepositoryService;
+use Dhi\BlogBundle\Services\RequestServiceProvider;
+use Dhi\BlogBundle\Services\TranslatorProviderService;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
@@ -29,17 +31,17 @@ class ArticleCommentManagerService
 
     /**
      * PaymentManagerService constructor.
-     * @param RequestStack $requestStack
+     * @param RequestServiceProvider $requestServiceProvider
      * @param RepositoryService $repositoryService
-     * @param TranslatorInterface $translator
+     * @param TranslatorProviderService $translatorProviderService
      */
-    public function __construct(RequestStack $requestStack,
+    public function __construct(RequestServiceProvider $requestServiceProvider,
                                 RepositoryService $repositoryService,
-                                TranslatorInterface $translator)
+                                TranslatorProviderService $translatorProviderService)
     {
-        $this->request = $requestStack->getCurrentRequest();
+        $this->request = $requestServiceProvider->getRequest();
         $this->repositoryService = $repositoryService;
-        $this->translator = $translator;
+        $this->translator = $translatorProviderService->getTranslator();
     }
 
     /**
