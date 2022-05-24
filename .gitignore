@@ -27,3 +27,4 @@ symfony.lock
 ###< symfony/framework-bundle ###
 
 /gitkey
+/.idea/
