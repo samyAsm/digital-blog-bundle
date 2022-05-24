@@ -110,7 +110,7 @@ class CategoryManagerService
     public function getCategoryFromRequest(?bool $strict = true): ?Category
     {
 
-        $category_id = $this->request->request->get('category_id');
+        $category_id = $this->request->get('category_id');
 
         /**
          * @var Category|null $category

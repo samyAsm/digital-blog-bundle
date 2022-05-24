@@ -76,7 +76,7 @@ class ArticleCommentManagerService
     public function getArticleCommentFromRequest(?bool $strict = true): ?ArticleComment
     {
 
-        $article_comment_id = $this->request->request->get('article_comment_id');
+        $article_comment_id = $this->request->get('article_comment_id');
 
         /**
          * @var ArticleComment|null $article_comment

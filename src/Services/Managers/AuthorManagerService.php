@@ -118,7 +118,7 @@ class AuthorManagerService
     public function getAuthorFromRequest(?bool $strict = true): ?Author
     {
 
-        $author_id = $this->request->request->get('author_id');
+        $author_id = $this->request->get('author_id');
 
         /**
          * @var Author|null $author

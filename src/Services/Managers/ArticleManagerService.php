@@ -173,7 +173,7 @@ class ArticleManagerService
     public function getArticleFromRequest(?bool $strict = true): ?Article
     {
 
-        $article_id = $this->request->request->get('article_id');
+        $article_id = $this->request->get('article_id');
 
         /**
          * @var Article|null $article
