@@ -39,7 +39,7 @@ class ArticleCommentManagerService
                                 RepositoryService $repositoryService,
                                 TranslatorProviderService $translatorProviderService)
     {
-        $this->request = $requestServiceProvider->getRequest();
+        $this->request = $requestServiceProvider->getRequest()->request;
         $this->repositoryService = $repositoryService;
         $this->translator = $translatorProviderService->getTranslator();
     }

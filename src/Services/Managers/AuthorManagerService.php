@@ -56,7 +56,7 @@ class AuthorManagerService
                                 DirectoryService $directoryService,
                                 FileUploadService $uploadService)
     {
-        $this->request = $requestServiceProvider->getRequest();
+        $this->request = $requestServiceProvider->getRequest()->request;
         $this->repositoryService = $repositoryService;
         $this->translator = $translatorProviderService->getTranslator();
         $this->directoryService = $directoryService;
